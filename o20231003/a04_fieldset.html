@@ -1,86 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<style>
+    input{
+        color: rgb(252, 252, 255);
+         background-color: rgb(197, 166, 119);
+         /* width: 30vh; */
+         margin-left: 5vh;
+    }
+    select{
+        color: rgb(252, 252, 255);
+         background-color: rgb(225, 190, 137);
+         width: 30vh;
+         text-align: center;
+         margin-left: 5vh;
+    }
+    p{
+        margin-left: 3vh;
+    }
+    fieldset {
+        width: 50%;
+        margin: auto;
+    }
+
+    legend {
+        background-color: #000;
+        color: #fff;
+        padding: 3px 6px;
+
+    }
+
+    table {
+        width: 100%;
+    }
+
+    .tdcenter {
+        width: 33vh;
+    }
+
+    .tdcolor {
+        background-color: blanchedalmond;
+    }
+
+    .textcenter {
+        text-align: center;
+    }
+</style>
+
 <body>
-    
-<div class="container">
-<h3>fieldset</h3>
-    <fieldset>
-        <legend>hr報表</legend>
-        <div>
-        <p>姓名</p>
 
-            <input type="text" name="" id="" style="color: blue; background-color: blanchedalmond;">
-        </div>
-        <div>
-            <p>密碼</p>
-            <input type="password" name="" id="">
-        </div>
-        <div>
-            <p>電話</p>
-            <input type="text" name="" id="">
-        </div>
-        <div>
-            <p>地址</p>
-            <input type="text" name="" id="">
-        </div>
-        <div>
-            <p>地址</p>
-            <input type="text" name="" id="">
-        </div>
-        <div>
-            <p>下拉選單</p>
-            <select name="" id="">
-    
-                <option value="">1</option>
-                <option value="">2</option>
-                <option value="">3</option>
-                <option value="">4</option>
-                
-            </select>
-        </div>
-        <div>
+    <div class="container">
+        <h3 class="textcenter">fieldset</h3>
+        <fieldset>
+            <legend style="text-align: center;"> 報表</legend>
+            <div>
+                <table>
 
-            <p>單選</p>
-            <input type="radio" name="" id="1">
-            <label for="1">1</label>
-            <input type="radio" name="" id="2">
-            <label for="2">2</label>
-            <input type="radio" name="" id="3">
-            <label for="3">3</label>
-        </div>
-        <div>
-            <p>多選</p>
-            <input type="checkbox" name="" id="21">
-                <label for="21">1</label>
-            <input type="checkbox" name="" id="22">
-                <label for="22">2</label>
-            <input type="checkbox" name="" id="23">
-                <label for="23">3</label>
-        </div>
-        <div>
-            <p>備註</p>
-            <textarea name="" id="" cols="30" rows="10">
-    -請輸入留言-
-            </textarea>
-            <p>reset</p>
-            <input type="reset" value="reset">
-            <p>submit</p>
-            <input type="submit" value="submit">
+                    <tr>
+                        <td class="tdcenter"></td>
+                        <td class="tdcenter tdcolor">
+                            <div>
+                                <div>
+                                    <p>姓名</p>
+
+                                    <input type="text" name="" id="">
+                                </div>
+                                <div>
+                                    <p>密碼</p>
+                                    <input type="password" name="" id="">
+                                </div>
+                                <div>
+                                    <p>電話</p>
+                                    <input type="text" name="" id="">
+                                </div>
+                                <div>
+                                    <p>地址</p>
+                                    <input type="text" name="" id="">
+                                </div>
+                                <div>
+                                    <p>地址</p>
+                                    <input type="text" name="" id="">
+                                </div>
+                                <div>
+                                    <p>下拉選單</p>
+                                    <select name="" id="">
+
+                                        <option value="">1111</option>
+                                        <option value="">2222</option>
+                                        <option value="">3333</option>
+                                        <option value="">4444</option>
+
+                                    </select>
+                                </div>
+                                <div>
+
+                                    <p>單選</p>
+                                    <input type="radio" name="" id="1">
+                                    <label for="1">1</label>
+                                    <input type="radio" name="" id="2">
+                                    <label for="2">2</label>
+                                    <input type="radio" name="" id="3">
+                                    <label for="3">3</label>
+                                </div>
+                                <div>
+                                    <p>多選</p>
+                                    <input type="checkbox" name="" id="21">
+                                    <label for="21">1</label>
+                                    <input type="checkbox" name="" id="22">
+                                    <label for="22">2</label>
+                                    <input type="checkbox" name="" id="23">
+                                    <label for="23">3</label>
+                                </div>
+                                <div>
+                                    <p>備註</p>
+                                    <textarea name="" id="" cols="30" rows="10">
+          -請輸入留言-
+                </textarea>
+                                    <p>reset</p>
+                                    <input type="reset" value="reset">
+                                    <p>submit</p>
+                                    <input type="submit" value="submit">
         </fieldset>
+    </div>
 
-        </div>
-        
-        
+    </div>
+    </td>
+    <td class="tdcenter"></td>
+    </tr>
+
+    </table>
+    </div>
 
 
 
 
-</div>
+
+    </div>
 
 </body>
+
 </html>
