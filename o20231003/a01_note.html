@@ -9,10 +9,11 @@
     
     table,tr,td{
             /* height: 50%; */
-            border: 1px solid rgb(95, 95, 95) ;
+            border: 2px solid rgb(95, 95, 95) ;
             margin: auto;
             border-collapse:collapse;
             vertical-align:text-top;
+            /* background-color: rgb(225, 155, 193); */
 
     }
     p{
@@ -48,12 +49,16 @@
             background-color: rgb(222, 166, 166);
         }
 
-        .note_01{}
-        .note_02{}
-        .note_03{}
-        .note_in{
-
+        .note_01{
+            background-color: rgb(255, 255, 255);
         }
+        .note_02{
+            background-color: rgb(255, 255, 255);
+        }
+        .note_03{
+            background-color: rgb(255, 255, 255);
+        }
+
 
         .h7{
             font-size: 18px;
@@ -74,15 +79,34 @@
          .ABC_center{
             text-align: center;
          }
+
+        .nav{
+            width: 100%;
+            /* background-color: antiquewhite; */
+            text-align: center;
+         }
         </style>
 </head>
 <body>
 <div class="container">
+<div class="nav">
+    <a href="#n1">康乃爾筆記</a>&nbsp;&nbsp;
+    <a href="#n2">東大筆記</a>&nbsp;&nbsp;
+    <a href="#n3">麥肯錫筆記</a>&nbsp;&nbsp;
+    <br> <br>
+</div>
+</div>
+<div class="container">
 <table>
+    
     <!-- 康乃爾 -->
+    
     <tr >
+        
         <td class="a" >
-            <h3>康乃爾筆記法</h3>
+            
+            <h3 id="n1">康乃爾筆記法</h3>
+            <div id="n1"></div>
             <table >
                 <tr >
                     <td >
@@ -129,14 +153,20 @@
                                         A
                                         <div class="ABC_title_02">筆記</div>
                                     </div>
-                                    <p></p>
+                                    <p>內文內文 <br> 內文內文內文內文</p>
+
+                                      <br>
+
+                                    <p>內文內文內文內文</p>
 
                                 </td>
                             </tr>
                             <tr>
-                                <td colspan="2">
+                                <td colspan="2" style="height: 30vh;">
                                     <div class="ABC_title_01">C <span class="ABC_title_02">總結</span></div>
-                                    <p></p>
+                                    <p>內文內文內文內文內文內文內文內文內文內文內文 <br>內文內文內文內文內文內文內文內文
+                                    <br>內文內文內文內文內文內文內文內文內文內文
+                                    </p>
                                 </td>
                                 <!-- <td></td> -->
                             </tr>
@@ -153,8 +183,11 @@
 
     <!-- 東大 -->
     <tr>
+        
         <td class="b">
-            <h3>東大筆記法</h3>
+            
+            <h3 >東大筆記法</h3>
+            <div id="n2"></div>
            <table>
             
             <tr>
@@ -168,13 +201,24 @@
                     小標三：<br> </br>魚鱼融入設計<br> </br>
                     創意波鞋設計將魚的特徵融入鞋款，帶來獨特風格。<br> </br>
                 </td>
-                <td class="note_02">
-                    <table>
+                <td >
+                    <table class="note_02">
 
-                        <tr >
-                            <td class="ABC_title_01 ">A <span class="ABC_title_02">現狀</span></td>
-                            <td class="ABC_title_01 ">B <span class="ABC_title_02">解釋</span></td>
-                            <td class="ABC_title_01 ">C <span class="ABC_title_02">行動</span></td>
+                        <tr style="height: 50vh; text-align: center;">
+                            <td><div class="ABC_title_01 ABC_center">A <br><span class="ABC_title_02">筆記</span></div><br>
+                                在魚之谷的某個角落，科學家們發現了一種奇怪的海洋生物，它們被稱為「哥吉鳥」。 <br> <br>
+                                這些鳥類生物擁有驚人的飛行能力，能夠迅速穿越水下世界。不同於機關魚，哥吉鳥對人類團隊感到極度敵對，經常襲擊他們的潛水器材和研究設備。<br> <br>
+                                
+                            </td>
+                            <td><div class="ABC_title_01 ABC_center">B <br><span class="ABC_title_02">整理</span></div><br>
+                                科學家們對哥吉鳥的敵對行為感到困惑，他們試圖理解這些生物為什麼對人類如此有敵意。<br> <br>
+                                這個新的威脅使得深海探險變得更加危險，並迫使科學家重新評估他們的研究策略。<br> <br>
+                            </td>
+                            <td><div class="ABC_title_01 ABC_center">C <br><span class="ABC_title_02">總結</span></div><br>
+                                與機關魚的共存取得成功，但現在科學家們面臨了一個更大的挑戰：如何與哥吉鳥達成和平共存，同時保護他們的研究和生態系統。 <br> <br>
+                                新的研究將需要更多的創新和努力，以找到解決這一問題的方法。 <br> <br>
+                                哥吉鳥的出現提醒著我們，自然界充滿了未知和變數。 <br> <br>
+                            </td>
                         </tr>
                     </table>
 
@@ -198,9 +242,11 @@
 
     <!-- 麥肯錫 -->
     <tr>
+        
         <td class="c">
-            <h3>麥肯錫筆記法</h3>
-            <table class="note_03">
+            <h3 >麥肯錫筆記法</h3>
+            <div id="n3"></div>
+            <table >
                 <tr>
                     <td>小標四：<br> </br>
                         色彩靈感來自魚<br> </br>
@@ -222,16 +268,38 @@
                         視覺感知技術<br> </br>
                         魚的視覺感知啟發了波鞋的創新技術，提供更好的視覺體驗。<br> </br></td>
                     <td class="note_03">
-                        <table>
+                        <table class="note_03">
                             <tr>
                                 <td colspan="3" class="ABC_title_01 ABC_title_02 ">重點問題</td>
                                 <!-- <td></td>
                                 <td></td> -->
                             </tr>
-                            <tr>
-                                <td class="ABC_title_01 ">A <span style="opacity: 0;">////</span> <span class="ABC_title_02">現狀</span></td>
-                                <td class="ABC_title_01 ">B <span style="opacity: 0;">////</span> <span class="ABC_title_02">解釋</span></td>
-                                <td class="ABC_title_01 ">C <span style="opacity: 0;">////</span> <span class="ABC_title_02">行動</span></td>
+                            <tr style="height: 75vh; text-align: center;">
+                                <td><div class="ABC_title_01 ">A <span style="opacity: 0;">//</span> <span class="ABC_title_02">現狀</span></div><br>
+                                    魚與機關槍：一場意想不到的邂逅<br> <br>
+
+                                    在一個遙遠的未來，我們見證了一場極為奇特的邂逅，那就是魚與機關槍的交互作用。<br> <br>
+                                    這個故事發生在一個名為「魚之谷」的深海秘境中，這裡擁有著神秘而迷人的魚類生態系統。<br> <br>
+                                    
+                                    故事的主人公是一支由科學家、潛水員和武器專家組成的團隊，他們的目標是深入魚之谷，研究當地獨特的海洋生物。最引人注目的是一種名為「機關魚」的生物。這些魚類不僅擁有金屬鱗片，還能發射類似機關槍的水流，用來獵食和自衛。科學家們被這種生物的進化所吸引，並試圖理解它們如何發展出如此不同尋常的技能。
+
+
+                                </td>
+                                <td><div class="ABC_title_01 ">B <span style="opacity: 0;">//</span> <span class="ABC_title_02">解釋</span></div><br>
+                                    最引人注目的是一種名為「機關魚」的生物。這些魚類不僅擁有金屬鱗片，還能發射類似機關槍的水流，用來獵食和自衛。<br> <br>
+                                    科學家們被這種生物的進化所吸引，並試圖理解它們如何發展出如此不同尋常的技能。<br> <br>
+                                    然而，隨著時間的推移，科學家們開始對機關魚的威脅感到擔憂。<br> <br>
+                                    這些生物變得越來越攻擊性，並對人類團隊產生了威脅。<br> <br>
+                                    為了自保，團隊中的武器專家不得不利用現有的技術，開始研發一種特殊的機關槍，專門用來對抗這些異常強大的魚類。<br> <br>
+                                </td>
+                                <td><div class="ABC_title_01 ">C <span style="opacity: 0;">//</span> <span class="ABC_title_02">行動</span></div><br>
+                                    然而，隨著時間的推移，科學家們開始對機關魚的威脅感到擔憂。<br> <br>
+                                    這些生物變得越來越攻擊性，並對人類團隊產生了威脅。
+                                    為了自保，團隊中的武器專家不得不利用現有的技術，開始研發一種特殊的機關槍，專門用來對抗這些異常強大的魚類。<br> <br>
+                                    但是，當他們抵達目的地時，他們發現這裡的魚類擁有驚人的智慧和力量。<br> <br>
+                                    這一過程充滿了挑戰和困難，但也帶來了令人難以置信的科學發現。<br> <br>
+                                    最終，科學家們開發出了一種可以中和機關魚攻擊的技術，並且成功地建立了人類和機關魚之間的和平共存。<br> <br>
+                                </td>
                             </tr>
                         </table>
 
@@ -247,7 +315,7 @@
 
 
 </table>
-
+</div>
 
 
 </div>
