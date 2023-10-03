@@ -4,6 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form</title>
+
+    <style>
+.text-red{
+    color: red;
+}
+    </style>
+
+
 </head>
 
 
@@ -16,7 +24,7 @@
             單行文字
         </h3>
         <p>
-            <input type="text" name="" id="556/88">
+            <input type="text" name="" id="55688" name="text">
         </p>
         
     </div>
@@ -27,7 +35,7 @@
             數字
         </h3>
         <p>
-            <input type="number" name="" id="123">
+            <input type="number" value="123">
         </p>
         
     </div>
@@ -38,13 +46,109 @@
             日期
         </h3>
         <p>
-            <input type="date" name="" id="123">
+            <input type="date" value="2023-01-01" name="myDate">
+        </p>
+        
+    </div>
+
+    <h3 style="background-color: bisque; color: bisque;">-</h3>
+
+
+    <div class="container">
+
+        <h3 class="text-red">
+            下拉選單
+        </h3>
+        <p>
+            <select name="myselect" id="">
+                <option value="s">-請選擇-</option>
+                <option value="s">>請選擇<</option>
+                <option value="s">(請選擇)</option>
+                <option value="s">[請選擇]</option>
+            </select>
+        </p>
+        
+    </div>
+
+    <div class="container">
+
+        <h3 class="text-red">
+            radio 單選
+        </h3>
+        <p>
+            <input type="radio" name="" id="">
+            <label for="item1">item1</label>
+            <input type="radio" name="" id="">
+            <label for="item2">item2</label>
+            <input type="radio" name="" id="">
+            <label for="item3">item3</label>
+        </p>
+        
+    </div>
+
+    <div class="container">
+
+        <h3 class="text-red">
+            checkbox 多選
+        </h3>
+        <!-- [] 代表 陣列array 多選 -->
+        <p>
+            <input type="checkbox" name="" id="check1">
+            <label for="check1">html</label>
+            <input type="checkbox" name="" id="check2">
+            <label for="check2">php</label>
+            <input type="checkbox" name="" id="check3">
+            <label for="check3">css</label>
         </p>
         
     </div>
 
 
 
+
+    <div class="container">
+
+        <h3>
+            submit 
+        </h3>
+
+        <p>
+            <input type="submit" value="submit">
+        </p>
+        
+    </div>
+
+    <div class="container">
+
+        <h3>
+            reset 
+        </h3>
+
+        <p>
+            <input type="reset" value="reset">
+        </p>
+        
+    </div>
+
+    <div class="container">
+
+        <h3>
+            password 
+        </h3>
+
+        <p>
+            <input type="password" value="">
+        </p>
+        
+    </div>
+    <div class="container">
+        <h3>textarea</h3>
+
+        <textarea name="" id="" cols="80" rows="10">
+hello 123
+hello 456</textarea>
+    
+    </div>
 
 </body>
 </html>
