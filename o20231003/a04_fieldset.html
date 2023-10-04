@@ -6,7 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
+<!--                  CSS                  -->
+
 <style>
+
     input{
         color: rgb(252, 252, 255);
          background-color: rgb(197, 166, 119);
@@ -16,8 +20,8 @@
     select{
         color: rgb(252, 252, 255);
          background-color: rgb(225, 190, 137);
-         width: 30vh;
-         text-align: center;
+         width: 32vh;
+         text-align:center;
          margin-left: 5vh;
     }
     p{
@@ -39,6 +43,15 @@
         width: 100%;
     }
 
+    .tablecenter{
+        width: 85%;
+        margin: auto;
+    }
+
+    .input_IN_table{
+        margin-left: auto;
+    }
+
     .tdcenter {
         width: 33vh;
     }
@@ -50,16 +63,37 @@
     .textcenter {
         text-align: center;
     }
+
+    .datetable{
+        margin: auto;
+    }
+    
+    .timeset{
+        width: 15vh;
+        font-size:xx-small;
+        letter-spacing:-1.5px
+    }
+
+    /* td{
+
+        background-color: blue;
+    } */
 </style>
+
+
+
 
 <body>
 
     <div class="container">
-        <h3 class="textcenter">fieldset</h3>
+        <h3 class="textcenter">Fieldset</h3>
         <fieldset>
+          
             <legend style="text-align: center;"> 報表</legend>
+            <form action="">
             <div>
                 <table>
+                
 
                     <tr>
                         <td class="tdcenter"></td>
@@ -68,24 +102,21 @@
                                 <div>
                                     <p>姓名</p>
 
-                                    <input type="text" name="" id="">
+                                    <input type="text" name="" id="" title="請輸入姓名">
                                 </div>
                                 <div>
                                     <p>密碼</p>
-                                    <input type="password" name="" id="">
+                                    <input type="password" name="" id="" title="你知道的太多了">
                                 </div>
                                 <div>
                                     <p>電話</p>
-                                    <input type="text" name="" id="">
+                                    <input type="text" name="" id="" title="請輸入電話">
                                 </div>
                                 <div>
                                     <p>地址</p>
-                                    <input type="text" name="" id="">
+                                    <input type="text" name="" id="" title="請輸入地址">
                                 </div>
-                                <div>
-                                    <p>地址</p>
-                                    <input type="text" name="" id="">
-                                </div>
+
                                 <div>
                                     <p>下拉選單</p>
                                     <select name="" id="">
@@ -98,6 +129,31 @@
                                     </select>
                                 </div>
                                 <div>
+                                    <p>
+                                        選擇日期
+                                    </p>
+                                    <table  class="tablecenter textcenter datetable">
+                                        <tr>
+                                            <td colspan="3"><input type="date" name="" id="" style="width: 35vh;" class="input_IN_table textcenter"></td>
+                                            <!-- <td></td>
+                                            <td></td> -->
+                                        </tr>
+                                        <tr>
+                                            <td> <input type="time" name="" id="" class="input_IN_table timeset"></td>
+                                            <td style="width: 1vh; ">至</td>
+                                            <td >
+                                                <input type="time" name="" id=""  class="input_IN_table timeset">
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <!-- <input type="date" name="" id="" style="width: 30vh;" class="td">
+                                    <br> <br>
+                                    
+                                    <input type="time" name="" id="" style="width: 10vh;">
+                                    <span class="tdcenter">至</span>
+                                    <input type="time" name="" id="" style="width: 10vh;">
+                                </div> -->
+                                <div>
 
                                     <p>單選</p>
                                     <input type="radio" name="" id="1">
@@ -108,7 +164,7 @@
                                     <label for="3">3</label>
                                 </div>
                                 <div>
-                                    <p>多選</p>
+                                    <p>多選</p>                                    
                                     <input type="checkbox" name="" id="21">
                                     <label for="21">1</label>
                                     <input type="checkbox" name="" id="22">
@@ -118,13 +174,15 @@
                                 </div>
                                 <div>
                                     <p>備註</p>
-                                    <textarea name="" id="" cols="30" rows="10">
-          -請輸入留言-
-                </textarea>
-                                    <p>reset</p>
-                                    <input type="reset" value="reset">
-                                    <p>submit</p>
-                                    <input type="submit" value="submit">
+                                    <textarea placeholder="          -請輸入留言-" name="" id="" cols="30" rows="10"></textarea>
+                                    <!-- <p>reset</p> -->
+                                    <br> <br>
+                                    <input type="reset" value="重設" class="tdcenter">
+                                    <br> <br>
+                                    <!-- <p>submit</p> -->
+                                    <input type="submit" value="提交" class="tdcenter">
+                                    <br> <br>
+            </form>
         </fieldset>
     </div>
 
