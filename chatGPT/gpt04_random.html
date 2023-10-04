@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>簡單網頁範例</title>
+    <style>
+        /* 基本樣式 */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 頁首樣式 */
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* 主要內容區域樣式 */
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* 留言板樣式 */
+        .comments {
+            background-color: #f9f9f9;
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+
+        /* 按鈕樣式 */
+        .button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* 文本框樣式 */
+        .textbox {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>歡迎來到我的網站</h1>
+    </header>
+    <div class="container">
+        <h2>留言板</h2>
+        <div class="comments">
+            <!-- 這裡是留言內容 -->
+            <p>留言1: Lorem ipsum dolor sit amet.</p>
+            <p>留言2: Consectetur adipiscing elit.</p>
+            <p>留言3: Sed do eiusmod tempor incididunt.</p>
+        </div>
+        <h2>新增留言</h2>
+        <textarea class="textbox" rows="4" placeholder="請輸入您的留言"></textarea>
+        <button class="button">發送留言</button>
+    </div>
+</body>
+</html>
