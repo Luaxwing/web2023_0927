@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- 外部載入 -->
+    <title>Document</title>
+
+    <!-- CSS -->
+    <!-- 內部載入 -->
+    <style>
+table,tr{
+    width: 100%;
+}
+td{
+    background-color: aqua;
+}
+        .body{
+            width: 100%;
+        }
+        /* 原本狀態 */
+        .imgBG{
+            width: 30vh;
+            height: 60vh;
+            background-position: center;
+            background-image:url(img/miku/02.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+            margin: auto;
+        }
+        .imgBG:hover{
+            background-image:url(img/miku/03.png);
+        }
+        .box{
+            width: 300px;
+            height: 200px;
+            background-color: lightblue;
+            border: 2px solid lightblue;
+            margin-bottom: 20px;
+            text-align: center;
+            
+            
+        }
+
+        /* 滑過去 狀態 */
+        .box:hover {
+            background-color: lightpink;
+            border: 2px solid lightpink;
+            color: red;
+            margin-left: 30px;
+            width: 50vh;
+            height: 15vh;
+            transition-duration: 1s;
+            border-radius: 10px;
+        }
+        .nav{
+            width:100%;
+            margin: auto;
+            font-size: 40px;
+        }
+
+        .container{
+            width:100%;
+            margin: auto;
+            background-color: bisque;
+        }
+        input:focus{
+            background-color: rgb(40, 230, 113);
+        }
+        td{
+            text-align: center;
+        }
+
+
+    </style>
+
+
+
+</head>
+<body class="body">
+    <div class="nav">
+        <table><tr>
+            <td><a href=""  class="box">home</a></td>
+            <td><a href=""  class="box">me</a></td>
+            <td><a href=""  class="box">about</a></td>
+        </tr></table>
+    </div>
+    <div class="container">
+        <div class="imgBG"></div>
+    </div>
+    <br>
+    <div class="container">
+        <div class="container">
+            <form action="">
+                <p>
+                    <label for="">name?</label>
+                    <input type="text" name="" id="">
+                </p>
+                <p>
+                    <label for="">mobile?</label>
+                    <input type="text" name="" id="">
+                </p>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
