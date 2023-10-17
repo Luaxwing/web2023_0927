@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 80%;
+            margin: auto;
+            margin-top: 30px;
+
+        }
+
+        .th {
+            font-weight: bold;
+        }
+
+        table,
+        tr,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            text-align: center;
+        }
+
+        table {
+            width: 100%;
+        }
+        /* 子選取器 */
+
+        tr:nth-child(odd) {
+            background: #afd0c9;
+        }
+
+        tr:nth-child(even) {
+            background: #fff;
+        }
+
+        /* 越下面優先級越高 */
+        tr:nth-child(1) {
+            background: #316f62;
+            color: #fff;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <table>
+            <tr class="th">
+                <td>ID</td>
+                <td>name</td>
+                <td>moblie</td>
+                <td>pic</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Amy</td>
+                <td>0911-111-111</td>
+                <td>amy.jpg</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Bob</td>
+                <td>0922-222-222</td>
+                <td>bob.jpg</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Cat</td>
+                <td>0933-333-333</td>
+                <td>cat.jpg</td>
+            </tr>
+            <td>1</td>
+            <td>Amy</td>
+            <td>0911-111-111</td>
+            <td>amy.jpg</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Bob</td>
+            <td>0922-222-222</td>
+            <td>bob.jpg</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Cat</td>
+            <td>0933-333-333</td>
+            <td>cat.jpg</td>
+        </tr>
+        <td>1</td>
+        <td>Amy</td>
+        <td>0911-111-111</td>
+        <td>amy.jpg</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>Bob</td>
+        <td>0922-222-222</td>
+        <td>bob.jpg</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>Cat</td>
+        <td>0933-333-333</td>
+        <td>cat.jpg</td>
+    </tr>
+        </table>
+    </div>
+</body>
+
+</html>
