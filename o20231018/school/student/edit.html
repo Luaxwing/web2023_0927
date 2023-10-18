@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            margin-top: 20px;
+        }
+        .text-center{
+            text-align: center;
+        }
+        /* table,tr,td{
+            border:1px solid black;
+            border-collapse: collapse;
+        } */
+        table{
+            width: 30%;
+            margin: auto;
+        }
+        td{height: 35px;}
+        input[type="file"]{
+            margin-left: 125px;
+        }
+        td>input{
+            width:300px;
+        }
+    </style>
+</head>
+<body>
+    this is edit.html page. </br></br>
+
+<div class="container text-center">
+    <form action="" enctype="multipart/form-data">
+        <table>
+            <tr>
+                <td>
+                    <label for="name">&nbsp;&nbsp;name</label>
+                    <input type="text" name="name" id="name" value="sample-text">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="mobile">mobile</label>
+                    <input type="text" name="mobile" id="mobile" value="sample-text">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="file" name="file" id="file" accept=".jpg, .png, .gif">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" name="submit" id="submit">
+                </td>
+            </tr>
+
+
+        </table>
+    </form>
+    
+</div>
+</br></br>
+<a href="./student.html"><span><------BACK</span></a>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 調整大小 */
+        
+        /* 換行 */
+        .display>span.block{
+            display: block;
+            background-color: blue;
+            color: aliceblue;
+            height: 50px;
+            width: 10vh;
+            text-align: center;
+        }
+
+        /* 不換行 */
+        .display>span.inline{
+            display: inline;
+            background-color: blue;
+            color: aliceblue;
+            height: 50px;
+            width: 10vh;
+            text-align: center;
+        }
+
+        .display>p.inline{
+            display: inline ;
+            background-color: blue;
+            color: aliceblue;
+            height: 50px;
+            width: 10vh;
+            text-align: center;
+        }
+        .display>p.inline-block {
+            display: inline-block ;
+            background-color: blue;
+            color: aliceblue;
+            height: 50px;
+            width: 10vh;
+            text-align: center;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>h1</h1>
+    <h3>h3</h3>
+    <span>span</span>
+    <span>//ssppaann</span>
+    <div class="display">
+        <span class="block">span1</span>
+        <span class="block">span1</span>
+        <span class="inline">span2</span>
+        <span class="inline">span2</span>
+        <p class="inline">abc</p>
+        <p class="inline-block">5555555555555555566</p>
+        <span><----this is inline-block</span>
+        <p>ssss</p>
+    </div>
+</body>
+</html>
