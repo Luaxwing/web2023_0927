@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		* {
+			font-family:'Times New Roman', Times, serif;
+            font-weight: bold;
+		}
+
+		body {
+			background-image: url(./img/bg.png);
+		}
+        h3{
+            background-color: grey;
+            text-align: center;
+            font-size: 50px;
+            color: aliceblue;
+        }
+		.container {
+			width: 80%;
+			margin: auto;
+			margin-top: 10vh;
+		
+		}
+
+		table,
+		tr,
+		td {
+			
+			border-collapse: collapse;
+			
+
+		}
+
+		table {
+			width: 100%;
+			text-align: center;
+			border-radius: 20px;
+
+		}
+
+		td {
+			/* width: 20%; */
+			height: 50vh;
+			font-size: 50px;
+			border-radius: 10px;
+
+		}
+
+		a {
+            color: rgb(255, 255, 255);
+			text-decoration: none;
+		}
+
+		.bg-1 {
+			background-color: rgb(21, 200, 200,0.3);
+            border: 100px solid rgb(21, 200, 200,0.5);
+		}
+
+		.bg-0 {
+			background-color: rgb(4, 88, 53,0.3);
+            border: 100px solid rgb(4, 88, 53,0.5);
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+        <h3>學校資料管理系統</h3>
+        <div>
+            <br>
+            <table>
+			<tr>
+				<td >
+					<a href="./student/student.html"class="bg-0">Student</a>
+				</td>
+                <td style="width:0vh;"></td>
+				<td >
+					<a href="./teacher/teacher.html"class="bg-1">Teacher</a>
+				</td>
+			</tr>
+		</table>
+        <br>
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<!--                  CSS                  -->
+
+<style>
+
+    input{
+        color: rgb(73, 73, 173);
+         background-color: rgb(240, 198, 134);
+         /* width: 30vh; */
+         margin-left: 5vh;
+    }
+    select{
+        color: rgb(73, 73, 173);
+        background-color: rgb(240, 198, 134);
+         width: 80%;
+         text-align:center;
+         margin-left: 10%;
+    }
+    p{
+        margin-left: 3vh;
+    }
+    fieldset {
+        width: 50%;
+        margin: auto;
+    }
+
+    legend {
+        background-color: #000000;
+        color: #fff;
+        padding: 3px 20px;
+
+    }
+
+    table {
+        width: 100%;
+    }
+
+    .tablecenter{
+        width: 90%;
+        margin: auto;
+    } 
+
+    .input_IN_table{
+        margin-left: 0px;
+    }
+    /* 避免<input>套用.input{} */
+
+    .p_IN_table{
+        margin-left: 0px;
+    }
+    /* 避免<p>套用.p{} */
+
+
+    .tdcenter {
+        width: 33vh;
+    }
+
+    .tdcolor {
+        background-color: blanchedalmond;
+    }
+
+    .textcenter {
+        text-align: center;
+    }
+
+    .datetable{
+        margin: auto;
+    }
+    
+    .timeset{
+        width: 40%;
+        height: auto;
+        font-size:xx-small;
+        letter-spacing:-1.4px;
+    }
+
+    /* td{
+
+        background-color: blue;
+    } */
+
+    fieldset {
+    border: 2px solid #0077b6; /* 設置外框線為 2px 寬的實線，並指定顏色 */
+    border-radius: 10px; /* 可選，設置圓角外觀，使外框線更圓滑 */
+    /* padding: 20px;  */
+    /* 可選，設置內邊距以使內容不緊貼外框線 */
+    /* 這是ChatGPT */
+}
+</style>
+
+
+
+
+<body>
+
+    <div class="container">
+        <h3 class="textcenter">Fieldset</h3>
+        <fieldset style="background-color: rgba(248, 213, 161, 0.913);">
+          
+            <legend style="text-align: center;" > 報表</legend>
+            <form action="" >
+                <br>
+            <div>
+                <table>
+                
+
+                    <tr>
+                        <td class="tdcenter"></td>
+                        <td class="tdcenter tdcolor">
+                            <div>
+                                <div>
+                                    <p>姓名</p>
+
+                                    <input type="text" name="" id="" title="請輸入姓名">
+                                </div>
+                                <div>
+                                    <p>密碼</p>
+                                    <input type="password" name="" id="" title="你知道的太多了">
+                                </div>
+                                <div>
+                                    <p>電話</p>
+                                    <input type="text" name="" id="" title="請輸入電話">
+                                </div>
+                                <div>
+                                    <p>地址</p>
+                                    <input type="text" name="" id="" title="請輸入地址">
+                                </div>
+
+                                <div>
+                                    <p>下拉選單</p>
+                                    <select name="" id="" >
+
+                                        <option value="">1111</option>
+                                        <option value="">2222</option>
+                                        <option value="">3333</option>
+                                        <option value="">4444</option>
+
+                                    </select>
+                                </div>
+                                <div>
+                                    <p>
+                                        選擇日期
+                                    </p>
+                                    <div class="tablecenter textcenter" >
+                                        <p class="p_IN_table">
+                                        <input type="date" name="" id="" style="width: 90%;" class="input_IN_table textcenter">
+                                        </p>
+                                        <p class="p_IN_table">
+                                        <input type="time" name="" id="" class="input_IN_table timeset">
+                                        <span>至</span>
+                                        <input type="time" name="" id=""  class="input_IN_table timeset">
+                                        </p>
+                                    </div>
+                                    
+                                    <!-- <table  class="tablecenter textcenter datetable">
+                                        <tr>
+                                            <td colspan="3"><input type="date" name="" id="" style="width: 35vh;" class="input_IN_table textcenter"></td> -->
+                                            <!-- <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td> <input type="time" name="" id="" class="input_IN_table timeset"></td>
+                                            <td style="width: 1vh; ">至</td>
+                                            <td >
+                                                <input type="time" name="" id=""  class="input_IN_table timeset">
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <!-- <input type="date" name="" id="" style="width: 30vh;" class="td">
+                                    <br> <br>
+                                    
+                                    <input type="time" name="" id="" style="width: 10vh;">
+                                    <span class="tdcenter">至</span>
+                                    <input type="time" name="" id="" style="width: 10vh;">
+                                </div> -->
+                                <div>
+
+                                    <p>單選</p>
+                                    <input type="radio" name="" id="1">
+                                    <label for="1">1</label>
+                                    <input type="radio" name="" id="2">
+                                    <label for="2">2</label>
+                                    <input type="radio" name="" id="3">
+                                    <label for="3">3</label>
+                                </div>
+                                <div>
+                                    <p>多選</p>                                    
+                                    <input type="checkbox" name="" id="21">
+                                    <label for="21">1</label>
+                                    <input type="checkbox" name="" id="22">
+                                    <label for="22">2</label>
+                                    <input type="checkbox" name="" id="23">
+                                    <label for="23">3</label>
+                                </div>
+                                <div>
+                                    <p>備註</p>
+                                    <textarea placeholder="-請輸入留言->" name="" id="" cols="30" rows="10" style="width: 100%;" ></textarea>
+                                    <!-- <p>reset</p> -->
+                                    <br> <br>
+                                    <input type="reset" value="重設" class="input_IN_table tdcenter" style="color: black;">
+                                    <br> <br>
+                                    <!-- <p>submit</p> -->
+                                    <input type="submit" value="提交" class="input_IN_table tdcenter" style="color: black;">
+                                    <br> <br>
+            </form>
+        </fieldset>
+    </div>
+
+    </div>
+    </td>
+    <td class="tdcenter"></td>
+    </tr>
+
+    </table>
+    </div>
+
+
+
+
+
+    </div>
+
+</body>
+
+</html>

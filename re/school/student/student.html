@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        nav>a{
+            font-size: 50px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color: aliceblue;
+            margin-left: 10px;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            margin-top: 30px;
+
+        }
+
+        .text-right {
+            text-align: right;
+        }
+
+        .text-right>a {
+            text-decoration: none;
+            font-size: 40px;
+        }
+
+        .th {
+            font-weight: bold;
+            font-size: 30px;
+        }
+        .img-size{
+            width:40px;
+            height: 40px;
+        }
+
+        nav {
+            background-color: rgb(1, 75, 68);
+        }
+
+        table,
+        tr,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            text-align: center;
+            height: 154px;
+            width: 70px;
+
+        }
+
+        table {
+            width: 100%;
+
+        }
+
+        /* 子選取器 */
+
+        tr:nth-child(odd) {
+            background: #afd0c9;
+        }
+
+        tr:nth-of-type(even) {
+            background: #ffffff;
+            color: blue;
+        }
+
+        /* 越下面優先級越高 */
+        tr:first-child {
+            background: #57877d;
+            color: #fff;
+        }
+        /* tr:first-child>td {
+            height: 10vh;
+        } */
+        footer {
+            background-color: rgb(67, 67, 67);
+        }
+    </style>
+</head>
+
+<body>
+    <nav><br>
+        <a href="../index.html">首頁</a>&nbsp;&nbsp;&nbsp;<a href="../teacher/teacher.html">教師</a>
+        <br>
+    <br></nav>
+    <hr>
+    <div class="container text-right">
+        <a href="./create.html">add++</a><br>
+        <!-- <a href="./edit.html">edit</a> -->
+        <table>
+            <tr class="th">
+                <td>ID</td>
+                <td>name</td>
+                <td>moblie</td>
+                <td>pic</td>
+                <td>修改/刪除</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td><a href="./edit.html?id=1">Amy</a></td>
+                <td>0911-111-111</td>
+                <td><br><img src="https://picsum.photos/id/60/100/100" alt="">
+                    <p>amy.jpg</p>
+                </td>
+                <td><a href="./edit.html?id=1"><img src="./icon/edit.png" alt="" class="img-size"></a>
+                <a href="./delete.html"><img src="./icon/delete.png" alt="" class="img-size"></a></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><a href="./edit.html?id=2">Bob</a></td>
+                <td>0922-222-222</td>
+                <td><br><img src="https://picsum.photos/id/15/100/100" alt="">
+                    <p>amy.jpg</p>
+                </td>
+                <td><a href="./edit.html?id=2"><img src="./icon/edit.png" alt="" class="img-size"></a>
+                <a href="./delete.html"><img src="./icon/delete.png" alt="" class="img-size"></a></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><a href="./edit.html?id=3">Cat</a></td>
+                <td>0933-333-333</td>
+                <td><br><img src="https://picsum.photos/id/200/100/100" alt="">
+                    <p>amy.jpg</p>
+                </td>
+                <td><a href="./edit.html?id=3"><img src="./icon/edit.png" alt="" class="img-size"></a>
+                <a href="./delete.html"><img src="./icon/delete.png" alt="" class="img-size"></a></td>
+            </tr>
+            <td>4</td>
+            <td><a href="./edit.html?id=4">Amy</a></td>
+            <td>0911-111-111</td>
+            <td>amy.jpg</td>
+            <td><a href="./edit.html?id=4"><img src="./icon/edit.png" alt="" class="img-size"></a>
+            <a href="./delete.html"><img src="./icon/delete.png" alt="" class="img-size"></a></td>           </tr>
+            <tr>
+                <td>5</td>
+                <td><a href="./edit.html?id=5">Bob</a></td>
+                <td>0922-222-222</td>
+                <td>bob.jpg</td>
+                <td><a href="./edit.html?id=5"><img src="./icon/edit.png" alt="" class="img-size"></a>
+                <a href="./delete.html"><img src="./icon/delete.png" alt="" class="img-size"></a></td>           </tr>
+            <tr>
+                <td>6</td>
+                <td><a href="./edit.html?id=6">Cat</a></td>
+                <td>0933-333-333</td>
+                <td>cat.jpg</td>
+                <td><a href="./edit.html?id=6"><img src="./icon/edit.png" alt="" class="img-size"></a>
+                <a href="./delete.html"><img src="./icon/delete.png" alt="" class="img-size"></a></td>           </tr>
+            
+        </table>
+    </div>
+
+    <br>
+    <br>
+
+    <footer><br><br><br></footer>
+</body>
+
+</html>
