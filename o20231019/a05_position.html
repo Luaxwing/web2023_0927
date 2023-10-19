@@ -11,6 +11,22 @@
     <!-- 內部載入 -->
 
     <style>
+        *{
+            font-size: larger;
+        }
+        .block01 {
+            height: 15vh;
+        }
+
+        .nav_fixed {
+            position: fixed;
+            top: 0%;
+            width: 100%;
+            height: 15vh;
+            background-color: lightblue;
+            z-index: 100;
+        }
+
         .pos-static {
             left: 30px;
         }
@@ -18,12 +34,38 @@
         .pos-relative {
             position: relative;
             left: 30px;
+            /* z-index: 500; */
+        }
+
+        .pos-absolute {
+            position: absolute;
+            top: 0%;
+            /* top: 490px; */
+            left: 50px;
+        }
+
+        .pos-fixed {
+            position: fixed;
+            bottom: 15px;
+            right: 50px;
+            z-index: 200;
+        }
+
+        .footer_fixed {
+            position: fixed;
+            bottom: 0%;
+            width: 100%;
+            height: 15vh;
+            background-color: grey;
+            z-index: 100;
         }
     </style>
 </head>
 
 <body>
-    <div class="container">
+    <nav class="nav_fixed"></nav>
+    <div class="block01"></div>
+    <div class="container" id="top">
         <h3>position</h3>
         <br>
         <hr><br>
@@ -33,11 +75,38 @@
         </p>
         <br>
         <hr><br>
+        <div class="pos-relative">
+            <h4>absolute</h4>
+            <div class="pos-absolute">
+               
+                <p>
+                    Lorem ipsum dolor siit amet.
+                    <hr>
+                </p>
+                
+            </div>
+        </div>
+
+        <br>
+        <br>
         <h4>relative</h4>
         <p class="pos-relative">
             Lorem ipsum dolor sit amet.
         </p>
+        <h4>relative2</h4>
+        <p class="pos-relative">
+            Lorem ipsum dolor sit amet.
+        </p>
+        <br>
+        <hr><br>
+        <h4>fixed</h4>
+        <p class="pos-fixed">
+            <a href="#top">top</a>
+        </p>
+        <br>
+        <hr><br>
     </div>
+    <footer class="footer_fixed"></footer>
 </body>
 
 </html>
