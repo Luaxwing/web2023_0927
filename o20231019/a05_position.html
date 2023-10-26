@@ -11,9 +11,10 @@
     <!-- 內部載入 -->
 
     <style>
-        *{
+        * {
             font-size: larger;
         }
+
         .block01 {
             height: 15vh;
         }
@@ -59,6 +60,57 @@
             background-color: grey;
             z-index: 100;
         }
+        .footer_real {
+            /* position: fixed; */
+            bottom: 0%;
+            width: 100%;
+            height: 15vh;
+            /* background-color: grey; */
+            /* z-index: 100; */
+        }
+.box{
+    position: relative;
+    width: 512px;
+    height: 512px;
+    background-color: red;
+    box-sizing: border-box;
+}
+.boxinbox{
+    width: 100px;
+    height: 100px;
+}
+        .box1 {
+            position: absolute;
+            top: 0%;
+            background-color:blue;
+        }
+
+        .box2 {
+            position: absolute;
+            right: 0%;
+            background-color:blue;
+        }
+
+        .box3 {
+            position: absolute;
+            bottom: 0%;
+            background-color:blue;
+
+        }
+
+        .box4 {
+            position: absolute;
+            right: 0%;
+            bottom:0%;
+            background-color:yellow;
+        }
+
+        .boxC {
+            position: absolute;
+            top: 40%;
+left: 40%;
+            background-color:blue;
+        }
     </style>
 </head>
 
@@ -78,12 +130,12 @@
         <div class="pos-relative">
             <h4>absolute</h4>
             <div class="pos-absolute">
-               
+
                 <p>
                     Lorem ipsum dolor siit amet.
                     <hr>
                 </p>
-                
+
             </div>
         </div>
 
@@ -106,7 +158,23 @@
         <br>
         <hr><br>
     </div>
+    <div class="container">
+        <div class="box">
+            <div class="boxinbox box1"></div>
+            <div class="boxinbox box2"></div>
+            <div class="boxinbox box3"></div>
+            <div class="boxinbox box4"></div>
+            <div class="boxinbox boxC"></div>
+        </div>
+    </div>
+
+    <br>
+    <br>
+
+
+
     <footer class="footer_fixed"></footer>
+    <footer class="footer_real"></footer>
 </body>
 
 </html>
