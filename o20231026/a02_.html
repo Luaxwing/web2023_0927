@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: flex;
+            /* flex-direction: row; */
+            width: 100%;
+            /* height: 80vh; */
+            background-color: lightblue;
+            padding-top: 20px;
+        }
+
+        .item {
+            width: 200px;
+            height: 200px;
+            background-color: lightgray;
+        }
+
+        .box-margin {
+            margin-left: 20px;
+        }
+
+
+        .try_test_container {
+            padding: 20px;
+            /* height: 90vh; */
+            flex-wrap: wrap;
+            /* flex-wrap: nowrap; */
+            /* justify-content: center; */
+            /* align-content: center; */
+            /* align-content: stretch; */
+            /* align-content: start; */
+            /* align-content: space-around; */
+            /* align-content: space-between; */
+
+
+        }
+
+        /* justify-content: center 水平置中 row */
+        /* align-content: center 垂直置中 column*/
+
+        /* 控制container內部元素是否換行 */
+        .try_test_item {
+
+            /* flex-grow: 1; */
+            flex-shrink: 0;
+
+        }
+
+        .try_test_container>:nth-child(even) {
+            background-color: blueviolet;
+        }
+
+        .playground {
+            display: flex;
+            width: 1080px;
+            height: auto;
+            background-color: bisque;
+            /* padding: 40px; */
+            flex-wrap: wrap;
+            align-content: space-around;
+            justify-content: center;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        .card {
+            height: 300px;
+            width: 300px;
+            margin-top: 10px;
+            margin-left: 10px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            background-color: grey;
+            box-sizing: border-box;
+            /* align-content: center; */
+            text-align: center;
+            font-size: 150px;
+            line-height: 300px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        .redC {
+            background-color: lightcoral;
+        }
+
+        /* .card::before{
+            content: '#';
+            color: lightgrey;
+        } */
+
+        .redC::before {
+            content: 'X';
+
+        }
+
+        .greenC {
+            background-color: lightgreen;
+        }
+
+
+
+        .greenC::before {
+            content: 'O';
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        container
+        <div class="item">item1</div>
+        <div class="item box-margin">item2</div>
+        <div class="item box-margin">item3</div>
+
+        <div class="item box-margin"">item1</div>
+        <div class=" item box-margin">item2</div>
+        <div class="item box-margin">item3</div>
+    </div>
+    <div class="container">
+        container
+        <div class="item">item1</div>
+        <div class="item box-margin">item2</div>
+        <div class="item box-margin">item3</div>
+
+        <div class="item box-margin"">item1</div>
+        <div class=" item box-margin">item2</div>
+        <div class="item box-margin">item3</div>
+    </div>
+    <br>
+    <hr><br>
+    <h2>TRY</h2>
+    <pre>
+        flex-shrink: 0;
+    </pre>
+    <span>格子不會收縮</span>
+    <div class="container try_test_container">
+        <div class="item try_test_item box-margin">item1</div>
+        <div class="item try_test_item box-margin">item2</div>
+        <div class="item try_test_item box-margin">item3</div>
+        <div class="item try_test_item box-margin">item4</div>
+        <!-- <div class="item try_test_item box-margin">item5</div>
+        <div class="item try_test_item box-margin">item6</div>
+        <div class="item try_test_item box-margin">item7</div>
+        <div class="item try_test_item box-margin">item8</div> -->
+    </div>
+    <br><br><br>
+    <hr>
+    <br><br><br>
+
+    <div class="playground">
+        <div class="card greenC"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card greenC"></div>
+        <div class="card redC"></div>
+        <div class="card redC"></div>
+        <div class="card"></div>
+        <div class="card greenC"></div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- 外部載入 -->
+    <title>南瓜網站</title>
+
+    <!-- CSS -->
+    <!-- 內部載入 -->
+
+    <style>
+        .nav{
+            position:fixed;
+            top: 0%;
+            margin-left: -10%;
+            width: 120%;
+            height: 15vh;
+            background-color: lightcoral;
+        }
+        .nav{
+            text-align: center;
+            line-height: 15vh;
+            font-size: 40px;
+
+        }
+        .nav>span{
+            margin-left: 40px;
+            margin-right: 40px;
+            font-size: 70px;
+        }
+        .nav>a{
+            text-decoration: none;
+        }
+        .nav_empty{
+            margin-left: -10%;
+            width: 120%;
+            height: 15vh;
+            background-color: lightgrey;
+        }
+        .container{
+            width: 100%;
+        }
+        .box1,.box2{
+            margin: auto;
+            margin-top: 10px;
+            width: 90%;
+            height: 70vh;
+            background-color: blanchedalmond;
+            padding-top: 20px;
+            
+        }
+        .inner{
+            display: flex;
+            flex-wrap: row;
+            /* background-color: azure; */
+            height: 500px;
+            width: 95%;
+            margin: auto;
+            align-content: center;
+            justify-content: center;
+            justify-content: space-around;
+
+        }
+        .inner_2{
+            display: flex;
+            /* background-color: azure; */
+            height: 280px;
+            width: 95%;
+            margin: auto;
+            align-content: center;
+            justify-content: center;
+            justify-content: space-around;
+
+        }
+        .content_1{
+            /* margin-top: auto;
+            margin-bottom: auto; */
+            width: 300px;
+            height: 100%;
+            background-color: rgb(255, 255, 255);
+            /* border: 5px solid blue; */
+            border-radius: 10px;
+            flex-shrink: 0;
+            box-sizing: border-box;
+        }
+        .content_2{
+            width: 300px;
+            height: 100%;
+            background-color: rgb(255, 255, 255);
+            border-radius: 10px;
+            flex-shrink: 0;
+            box-sizing: border-box;
+        }
+        .img{
+            margin: auto;
+            margin-top: 10px;
+            width: 95%;
+            height: 50%;
+            background-color: blueviolet;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+        .textbox{
+            margin-left: 10px;
+        }
+        .topimg{
+            height: 100%;
+        }
+        .dio{
+            background-image: url(./img/i08.jpg);
+            /* background-position: 0 0; */
+            background-size: 100%;
+        }
+        .dio:hover{
+            background-image: url(./img/i08_1.jpg);
+            background-size: 110%;
+        }
+        .senkou{
+            background-image: url(./img/i09.jpg);
+            background-size: 100%;
+        }
+        .senkou:hover{
+            background-image: url(./img/i09_1.gif);
+            background-size: 101%;
+        }
+
+        table{
+            height: 65vh;
+            width: 100%;
+            margin: auto;
+            /* background-color: blue; */
+            /* border: 2px solid black; */
+        }
+        img{
+            /* height: 100%; */
+            width: 100%;
+        }
+    </style>
+
+
+</head>
+<body>
+    <nav class="nav">
+        <a href="#content01">連結1</a>
+        <span>標題</span>
+        <a href="#content02">連結2</a>
+    </nav>
+    <div class="nav_empty" id="content01"></div>
+    <div class="container">
+        <div class="box1" >
+            <div class="inner">
+                <div class="content_1">
+                    <div class="img">
+                        <img src="./img/i01.jpg" alt="" srcset="" class="topimg">
+                    </div>
+                    <p class="textbox">
+                        南瓜
+                    </p>
+                </div>
+                <div class="content_1">
+                    <div class="img">
+                        <img src="./img/i02.jpg" alt="" srcset="" class="topimg">
+                    </div>
+                    <p class="textbox">
+                        南瓜
+                    </p>
+                </div>
+                <div class="content_1">
+                    <div class="img">
+                        <img src="./img/i03.jpg" alt="" srcset="" class="topimg">
+                    </div>
+                    <p class="textbox">
+                        南瓜
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="box2" id="content02">
+            <table>
+                <tr><td><div class="inner_2">
+                    <div class="content_2">
+                        <div class="img">
+                            <img src="./img/i04.jpg" alt="" srcset="">
+                        </div>
+                        <p class="textbox">
+                            南瓜
+                        </p>
+                    </div>
+                    <div class="content_2">
+                        <div class="img">
+                            <img src="./img/i05.jpg" alt="" srcset="">
+                        </div>
+                        <p class="textbox">
+                            南瓜
+                        </p>
+                    </div>
+                    <div class="content_2">
+                        <div class="img">
+                            <img src="./img/i06.jpg" alt="" srcset="">
+                        </div>
+                        <p class="textbox">
+                            南瓜
+                        </p>
+                    </div></td></tr>
+                <tr><td><div class="inner_2">
+                    <div class="content_2">
+                        <div class="img">
+                            <img src="./img/i07.jpg" alt="" srcset="">
+                        </div>
+                        <p class="textbox">
+                            南瓜
+                        </p>
+                    </div>
+                    <div class="content_2">
+                        <div class="img dio">
+                            <!-- <img src="./img/i08.jpg" alt="你這家伙...正在看著..對吧" srcset="" > -->
+                        </div>
+                        <p class="textbox">
+                            吸血鬼
+                        </p>
+                    </div>
+                    <div class="content_2">
+                        <div class="img senkou">
+                            <!-- <img src="./img/i09.jpg" alt="" srcset=""> -->
+                        </div>
+                        <p class="textbox">
+                            南瓜
+                        </p>
+                    </div></td></tr>
+            </table>
+            
+                
+                <!--  -->
+        </div>
+    </div>
+    
+</body>
+</html>
