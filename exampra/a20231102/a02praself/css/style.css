@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    overflow: hidden;
+}
+
+.body {
+    width: 1024px;
+    height: 768px;
+    background-color: rgb(0, 183, 255);
+    margin: auto;
+}
+
+.header {
+    width: 1000px;
+    height: 65px;
+    /* background-color: rgb(7, 168, 205); */
+    background-color: white;
+    margin: auto;
+    border: 1px solid black;
+
+}
+
+.header_box {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    /* background-color: red; */
+    /* background-image: url(../../a01pra/17300-104301/logo.png);
+    background-position: center;
+    background-repeat: no-repeat; */
+
+}
+
+.container {
+    height: calc(768px - 65px - 20px);
+    width: 1000px;
+    background-color: rgb(17, 127, 109);
+    margin: auto;
+
+    display: flex;
+    /* flex-wrap: wrap; */
+    padding-left: 5px;
+    padding-right: 5px;
+    box-sizing: border-box;
+}
+
+
+
+.aside {
+
+    width: 215px;
+    /* width: calc( 1000px - 770px ); */
+    height: 100%;
+    margin-right: 10px;
+    background-color: rgb(191, 240, 246);
+    display: flex;
+    flex-direction: column;
+
+}
+
+.asider-header {
+    height: calc(100% - 25px);
+    /* background-color: rgb(112, 150, 220); */
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+    text-align: center;
+   
+}
+
+.asider-header>.box{
+    width:200px;
+    height: 35px;
+   
+    background-image: url(../17300-104301/menu1.png);
+    background-repeat: no-repeat;
+    text-align: center;
+    padding-top: 8px;
+    margin-top: 5px;
+    box-sizing: border-box;
+    border: 2px solid black;
+    border-radius: 10px;
+
+}
+
+.box_title{
+/* background-color: #FF00FF; */
+display: flex;
+justify-content: center;
+}
+.aside_title{
+    width: 100px;
+    color: #FF00FF;
+    font-family: '標楷體';
+    font-size:18px ;
+    font-weight: bold;
+    /* text-decoration: underline #FF00FF; */
+    border-bottom: 1px solid black;
+    margin-top: 5px;
+    margin-bottom: 5px;
+ 
+}
+.asider-header>.box:hover{
+    background-image: url(../17300-104301/menu2.png);
+    border: 2px solid brown;
+}
+
+.box>a{
+    text-decoration: none;
+    color: #000000;
+    font-family: '標楷體';
+}
+
+
+.asider-footer {
+    height: 25px;
+    background-color: rgb(174, 174, 209);
+    font-size: 16px;
+    color: #000000;
+    font-family: '標楷體';
+    text-align: center;
+}
+
+
+
+.main {
+
+    /* width: 770px ; */
+    width: calc(100% - 215px);
+    height: 100%;
+    background-color: rgb(173, 173, 192);
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+.main-header {
+    height: 25px;
+    background-color: rgb(9, 207, 228);
+    font-size: 24px;
+    color: #0000FF;
+    font-family: '標楷體';
+}
+
+.main-footer {
+    height: calc(100% - 25px);
+    background-color: rgb(88, 183, 194);
+}
+
+
+.footer {
+    width: 1000px;
+    height: 20px;
+    background-color: rgb(83, 106, 182);
+    margin: auto;
+}
