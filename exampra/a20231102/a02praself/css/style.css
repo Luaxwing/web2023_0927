@@ -6,7 +6,7 @@
 .body {
     width: 1024px;
     height: 768px;
-    background-color: rgb(0, 183, 255);
+    /* background-color: rgb(0, 183, 255); */
     margin: auto;
 }
 
@@ -17,6 +17,7 @@
     background-color: white;
     margin: auto;
     border: 1px solid black;
+    box-sizing: border-box;
 
 }
 
@@ -34,7 +35,7 @@
 .container {
     height: calc(768px - 65px - 20px);
     width: 1000px;
-    background-color: rgb(17, 127, 109);
+    /* background-color: rgb(17, 127, 109); */
     margin: auto;
 
     display: flex;
@@ -42,6 +43,7 @@
     padding-left: 5px;
     padding-right: 5px;
     box-sizing: border-box;
+    border: 1px solid black;
 }
 
 
@@ -52,7 +54,7 @@
     /* width: calc( 1000px - 770px ); */
     height: 100%;
     margin-right: 10px;
-    background-color: rgb(191, 240, 246);
+    /* background-color: rgb(191, 240, 246); */
     display: flex;
     flex-direction: column;
 
@@ -111,11 +113,19 @@ justify-content: center;
     color: #000000;
     font-family: '標楷體';
 }
+.a-first{
+
+        text-decoration: underline blue;
+        
+}
+.a-first>a{
+    color: blue;
+}
 
 
 .asider-footer {
     height: 25px;
-    background-color: rgb(174, 174, 209);
+    /* background-color: rgb(174, 174, 209); */
     font-size: 16px;
     color: #000000;
     font-family: '標楷體';
@@ -129,7 +139,7 @@ justify-content: center;
     /* width: 770px ; */
     width: calc(100% - 215px);
     height: 100%;
-    background-color: rgb(173, 173, 192);
+    /* background-color: rgb(173, 173, 192); */
 
     display: flex;
     flex-direction: column;
@@ -138,7 +148,7 @@ justify-content: center;
 
 .main-header {
     height: 25px;
-    background-color: rgb(9, 207, 228);
+    /* background-color: rgb(9, 207, 228); */
     font-size: 24px;
     color: #0000FF;
     font-family: '標楷體';
@@ -146,13 +156,24 @@ justify-content: center;
 
 .main-footer {
     height: calc(100% - 25px);
-    background-color: rgb(88, 183, 194);
+    /* background-color: rgb(88, 183, 194); */
 }
 
 
 .footer {
     width: 1000px;
     height: 20px;
-    background-color: rgb(83, 106, 182);
+    /* background-color: rgb(83, 106, 182); */
     margin: auto;
+    box-sizing: border-box;
+    border: 1px solid black;
+    font-family: '標楷體';
+    color: #000;
+    font-size: 16px;
+    text-align: center;
+}
+
+iframe{
+    width: 100%;
+    height: 100%;
 }
