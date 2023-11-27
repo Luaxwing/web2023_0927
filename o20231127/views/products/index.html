@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        .pt-30 {
+            padding-top: 10vh;
+        }
+
+        .td-box {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 236px;
+        }
+
+        /* .td-box > p {
+            width: 100%;
+        } */
+
+        .td-box-row {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 236px;
+        }
+
+        * {
+            overflow-x: hidden;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- nav -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="row w-100">
+            <div class="col-1"></div>
+            <div class="col-7"> <a class="navbar-brand" href="#">Navbar</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01"
+                    aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarColor01">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Features</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Pricing</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About</a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+            <div class="col text-end">
+                <form class="form-inline"></form>
+                <div class="row ">
+                    <div class="col-7 text-end"><input class="form-control mr-sm-2" type="search" placeholder="Search"
+                            aria-label="Search" /></div>
+                    <div class="col text-start"><button class="btn btn-outline-info my-2 my-sm-0"
+                            type="submit">Search</button></div>
+                    <!-- <div class="col-1"></div> -->
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </nav>
+    <!-- nav end -->
+
+
+    <div class="row" style="height:100%;">
+        <!-- sidebar -->
+        <div class="col-1" style="width: 300px;">
+            <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark" style="width: 250px;height: 100%;">
+                <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                    <svg class="bi me-2" width="40" height="32">
+                        <use xlink:href="#bootstrap"></use>
+                    </svg>
+                    <span class="fs-4">Sidebar</span>
+                </a>
+                <hr>
+                <ul class="nav nav-pills flex-column mb-auto">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link active" aria-current="page">
+                            <svg class="bi me-2" width="16" height="16">
+                                <use xlink:href="#home"></use>
+                            </svg>
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link text-white">
+                            <svg class="bi me-2" width="16" height="16">
+                                <use xlink:href="#speedometer2"></use>
+                            </svg>
+                            Dashboard
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link text-white">
+                            <svg class="bi me-2" width="16" height="16">
+                                <use xlink:href="#table"></use>
+                            </svg>
+                            Orders
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link text-white">
+                            <svg class="bi me-2" width="16" height="16">
+                                <use xlink:href="#grid"></use>
+                            </svg>
+                            Products
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link text-white">
+                            <svg class="bi me-2" width="16" height="16">
+                                <use xlink:href="#people-circle"></use>
+                            </svg>
+                            Customers
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- sidebar end -->
+        <!-- container -->
+        <div class="col" style="margin-left:-50px ;">
+            <div class="container mt-3">
+
+                <!-- title -->
+                <h2>Products</h2>
+                <p>The .table-hover class enables a hover state (grey background on mouse over) on table rows:</p>
+                <!-- title end -->
+
+                <!-- button  -->
+                <div class="text-end">
+
+                    <!-- modal button-->
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal_02">
+                        add modal
+                    </button>
+                    <!-- modal button end -->
+
+                    <!-- button_add  -->
+                    <a href="create.html" class="btn btn-success">add</a>
+                    <!-- button_add end -->
+
+                </div>
+                <!-- button end -->
+
+                <!-- modal contant "create" -->
+                <div class="modal  fade" id="modal_02" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                    aria-labelledby="modal_02Label" aria-hidden="true">
+
+                    <!-- modal dialog -->
+                    <div class="modal-dialog modal-lg">
+                        <!-- modal contant -->
+                        <div class="modal-content">
+                            <!-- modal header -->
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modal_02Label">Modal title</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <!-- modal header enf -->
+                            <!-- modal body -->
+                            <div class="modal-body">
+                                <!-- create -->
+                                <div class="row">
+
+                                    <div class="col"></div>
+                                    <div class="col-12 col-sm-6">
+
+                                        <form action="/action_page.php">
+                                            <div class="row">
+                                                <div class="col-12 col-sm-6">
+                                                    <div class="mb-3">
+                                                        <label for="file">File:</label>
+                                                        <input type="file" class="form-control" id="file">
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="col-12 ">
+                                                    <div class="mb-3">
+                                                        <label for="photoDesc">Photo Description:</label>
+                                                        <input type="text" class="form-control" id="photoDesc">
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="col-12 col-sm-6">
+                                                    <div class="mb-3">
+                                                        <label for="price">Price:</label>
+                                                        <input type="text" class="form-control" id="price">
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="col-12 col-sm-6">
+                                                    <div class="mb-3">
+                                                        <label for="photoDesc">Unit:</label>
+                                                        <input type="text" class="form-control" id="photoDesc">
+                                                    </div>
+
+                                                </div>
+
+
+
+                                            </div>
+                                            <br><br>
+                                            <div class="row">
+                                                <div class="col"></div>
+                                                <div class="col-12 col-sm-5">
+                                                    <button type="submit" class="btn btn-primary"
+                                                        style="width: 100%;margin-top: 5px;">Submit</button>
+
+                                                </div>
+                                                <div class="col-12 col-sm-5">
+                                                    <a href="index.html" class="btn btn-success"
+                                                        style="width: 100%;margin-top: 5px;">back</a>
+                                                </div>
+                                                <div class="col"></div>
+                                            </div>
+
+
+
+
+                                        </form>
+
+
+                                    </div>
+                                    <div class="col"></div>
+                                </div>
+                                <!-- create end -->
+                            </div>
+                            <!-- modal body end -->
+                            <!-- modal footer -->
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Understood</button>
+                            </div>
+                            <!-- modal footer end -->
+                        </div>
+                        <!-- modal contant end -->
+                    </div>
+                    <!-- modal dialog end -->
+                </div>
+                <!-- modal contant "create" -->
+
+                <table class="table table-hover text-center">
+
+                    <!-- tablehead -->
+                    <thead>
+                        <tr>
+                            <th width="5%">id</th>
+                            <th width="20%">img_url</th>
+                            <th width="30%">desc</th>
+                            <th width="5%">price</th>
+                            <th width="10%">unit</th>
+                            <th>oprate</th>
+                        </tr>
+                    </thead>
+                    <!-- tablehead end -->
+
+                    <!-- content -->
+                    <tbody>
+                        <!-- content01 -->
+                        <tr>
+                            <td>
+                                <div class="td-box">
+                                    1
+                                </div>
+                            </td>
+                            <td>
+                                <img src="https://picsum.photos/id/20/310/250" class="rounded" alt="Cinque Terre"
+                                    width="304" height="236">
+                            </td>
+                            <td class="text-start">
+                                <div class="td-box">
+                                    <p class="w-100">
+                                        imgUrl: p1.jpg
+                                    </p>
+                                    <p class="w-100">
+                                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae rerum amet sint
+                                        sunt.
+                                        Illo
+                                        tenetur similique quis fugiat fugit vero.
+                                    </p>
+                                </div>
+
+                            </td>
+                            <td>
+                                <div class="td-box">
+                                    100
+                                </div>
+                            </td>
+                            <td>
+                                <div class="td-box">
+                                    元
+                                </div>
+                            </td>
+                            <td>
+                                <div class="td-box-row">
+                                    <button type="button" class="btn btn-warning"><i class="fas fa-edit"></i></button>
+                                    <button type="button" class="ms-3 btn btn-danger"><i
+                                            class="fas fa-trash"></i></button>
+                                </div>
+                            </td>
+                        </tr>
+                        <!-- content01 end -->
+
+                        <!-- content02 -->
+                        <tr>
+                            <td>
+                                <div class="td-box">
+                                    1
+                                </div>
+                            </td>
+                            <td>
+                                <img src="https://picsum.photos/id/20/310/250" class="rounded" alt="Cinque Terre"
+                                    width="304" height="236">
+                            </td>
+                            <td class="text-start">
+                                <div class="td-box">
+                                    <p class="w-100">
+                                        imgUrl: p1.jpg
+                                    </p>
+                                    <p class="w-100">
+                                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae rerum amet sint
+                                        sunt.
+                                        Illo
+                                        tenetur similique quis fugiat fugit vero.
+                                    </p>
+                                </div>
+
+                            </td>
+                            <td>
+                                <div class="td-box">
+                                    100
+                                </div>
+                            </td>
+                            <td>
+                                <div class="td-box">
+                                    元
+                                </div>
+                            </td>
+                            <td>
+                                <div class="td-box-row">
+                                    <button type="button" class="btn btn-warning">Edit</button>
+                                    <button type="button" class="ms-3 btn btn-danger">Del</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <!-- content02 end -->
+
+                        <!-- content03 -->
+                        <tr>
+                            <td>
+                                <div class="td-box">
+                                    1
+                                </div>
+                            </td>
+                            <td>
+                                <img src="https://picsum.photos/id/20/310/250" class="rounded" alt="Cinque Terre"
+                                    width="304" height="236">
+                            </td>
+                            <td class="text-start">
+                                <div class="td-box">
+                                    <p class="w-100">
+                                        imgUrl: p1.jpg
+                                    </p>
+                                    <p class="w-100">
+                                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae rerum amet sint
+                                        sunt.
+                                        Illo
+                                        tenetur similique quis fugiat fugit vero.
+                                    </p>
+                                </div>
+
+                            </td>
+                            <td>
+                                <div class="td-box">
+                                    100
+                                </div>
+                            </td>
+                            <td>
+                                <div class="td-box">
+                                    元
+                                </div>
+                            </td>
+                            <td>
+                                <div class="td-box-row">
+                                    <button type="button" class="btn btn-warning">Edit</button>
+                                    <button type="button" class="ms-3 btn btn-danger">Del</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <!-- content03 end -->
+
+                    </tbody>
+                    <!-- content end -->
+                </table>
+
+            </div>
+        </div>
+        <!-- container end -->
+    </div>
+
+</body>
+
+</html>
