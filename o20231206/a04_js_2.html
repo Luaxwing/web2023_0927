@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <!-- <html>is Root Element -->
 <html lang="en">
-     <!-- <head>is Element -->
+<!-- <head>is Element -->
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>myTitle</title>
 </head>
- <!-- <Body>is Element -->
+<!-- <Body>is Element -->
+
 <body>
     <!-- <h1>is Element -->
-    <h1>A Heading</h1>
+    <h1 id="myH1">A Heading</h1>
     <!-- "A Heading" is Text -->
 
     <!-- <a>is Element -->
@@ -23,9 +25,20 @@
     <script>
         // 綁定
         let myBtn = document.getElementById('myBtn');
+        let myH1 = document.getElementById('myH1');
+
+
+        // 動作
+        myBtn.addEventListener('click', function () {
+            myH1.innerHTML = "hello! 1231321"
+        })
+
         console.log(myBtn);
         console.log('myBtn click ok');
-        // 動作
+        console.log(myH1);
+        console.log(console);
+
     </script>
 </body>
+
 </html>
