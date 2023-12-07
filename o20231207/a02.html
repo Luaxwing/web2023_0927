@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>JavaScript Window</h2>
+
+    <!-- <p id="demo"></p> -->
+
+    <input type="text" name="" id='word'>
+    <button type="button" id="myBtnHref">open_href</button>
+
+
+    <script>
+        //document.querySelectorAll('.class');
+
+        let myBtnHref = document.getElementById('myBtnHref');
+
+
+        myBtnHref.addEventListener('click', function () {
+            console.log("input:"+word.value);
+            searchText=word.value;
+            console.log("search:"+searchText);
+            window.open('https://dictionary.cambridge.org/dictionary/english-chinese-traditional/'+searchText);
+            window.open('https://www.oed.com/search/dictionary/' + '?scope=Entries&q=' + searchText);
+
+        })
+
+
+    </script>
+
+</body>
+
+</html>

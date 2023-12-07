@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>JavaScript Window</h2>
+
+    <!-- <p id="demo"></p> -->
+
+    <button type="button" id="myBtn">open_window</button>
+    <button type="button" id="myBtnHref">open_href</button>
+    <button type="button" id="myBtnClose">close_window</button>
+
+    <script>
+        //document.querySelectorAll('.class');
+        let myBtn = document.getElementById('myBtn');
+        let myBtnHref = document.getElementById('myBtnHref');
+        let myBtnClose = document.getElementById('myBtnClose');
+        let screenWidth = screen.width;
+        let screenHeight = screen.height;
+
+        console.log(screenWidth);
+        console.log(screenHeight);
+
+        let searchText = "apple";
+
+        myBtn.addEventListener('click', function () {
+            myWindow = window.open('https://www.w3schools.com/js/default.asp#gsc.tab=0', '_blank');
+            // default
+        })
+        myBtnHref.addEventListener('click', function () {
+            window.open('https://dictionary.cambridge.org/dictionary/english-chinese-traditional/'+searchText);
+            window.open('https://www.oed.com/search/dictionary/' + '?scope=Entries&q=' + searchText);
+            // window.location.href = "https://www.w3schools.com/js/default.asp#gsc.tab=0";
+            // window.location.href = "https://www.w3schools.com/js/default.asp#gsc.tab=0";
+            // myWindow=window.open('https://www.w3schools.com/js/default.asp#gsc.tab=0','_parent');
+            // myWindow=window.open('https://www.w3schools.com/js/default.asp#gsc.tab=0','_self');
+            // myWindow=window.open('https://www.w3schools.com/js/default.asp#gsc.tab=0','_top');
+            // 
+            // location.replace("https://www.w3schools.com/js/default.asp#gsc.tab=0");
+            // replace 無法回上一頁
+        })
+
+        myBtnClose.addEventListener('click', function () {
+            myWindow.close();
+        })
+        // document.getElementById("demo").innerHTML =
+        // "Browser inner window width: " + window.innerWidth + "px<br>" +
+        // "Browser inner window height: " + window.innerHeight + "px";
+    </script>
+
+</body>
+
+</html>
