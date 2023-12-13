@@ -26,13 +26,22 @@
 
 
     <script>
-       
-    //    innerText VS innerHTML
-let myDiv=document.getElementById('myDiv');
-// myDiv.innerText ="<i>55688</i>";
-myDiv.innerHTML ="<i>55688</i>";
 
-// innerHTML 吃得到 HTML 格式
+        //    1.
+        //    innerText VS innerHTML
+        let myDiv = document.getElementById('myDiv');
+        // myDiv.innerText ="<i>55688</i>";
+        myDiv.innerHTML = "<i>55688</i>";
+        // innerHTML 吃得到 HTML 格式
+
+        // 2.少用 後面元件會被影響
+        document.write('hello write');
+
+        // 3.alert
+        // alert('Alert Hello');
+
+        // 4.最常用
+        console.log();
 
     </script>
 </body>
