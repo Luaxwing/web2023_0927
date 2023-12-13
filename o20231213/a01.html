@@ -18,11 +18,11 @@
 
 
     <script>
-        
+
         // XXX
-        //   function myAlertFun(words) {
-        //             alert(words);
-        //         }
+          function myAlertFun(words) {
+                    alert(words);
+                }
 
         // function alertFun() {
         //     alert('HELLO!');
@@ -48,8 +48,11 @@
         // }, 3000);
 
         //  4.
-        setTimeout(() => alert('hello123')
-            , 3000);
+        // setTimeout(() => alert('hello123')
+        //     , 3000);
+
+        // EX.setTimeout function帶值的正確打開方式
+        setTimeout(myAlertFun, 10000, 'HELLO!');
 
 
 
