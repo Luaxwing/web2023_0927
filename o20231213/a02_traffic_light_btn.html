@@ -17,6 +17,12 @@
 
 
     <style>
+                .trafficLight{
+            z-index: 8;
+        }
+        .myContainer{
+            overflow: hidden;
+        }
         .light {
             margin: auto;
             height: 200px;
@@ -25,29 +31,79 @@
             border-radius: 100px;
         }
 
+        .walkingimg {
+            -moz-transform: scaleX(-1);
+            -webkit-transform: scaleX(-1);
+            -o-transform: scaleX(-1);
+            transform: scaleX(-1);
+            width: 300px;
+            position: relative;
+            left: -1000px;
+        }
+
+        /* .walking0{ */
+            /* position: relative;
+            left: -1000px; */
+            /* animation-name: walkingAni;
+            animation-duration: 4s; */
+/*  */
+        /* } */
+
+        .walking1{
+            
+           
+            animation-name: walkingAni;
+            transition-timing-function:linear;
+            animation-duration: 80s;
+            /* animation-fill-mode: forwards; */
+
+        }
+
+        @keyframes walkingAni{
+            from{left: 100%;}
+            to{left: -500%;}
+        }
+
+
     </style>
 </head>
 
 <body>
     <br><br>
-    <div class="container">
-        <button class="btn" id="colorBtn" style="background-color: red;">
-            <span id="countdown">click me ! </span>
-        </button>
-        <br>
-        <hr>
-        <div class="row border bg-dark">
-            <div class="col border p-3">
-                <div class="light" id="light1"></div>
+    <div class="container myContainer">
+        <div  style="width: 100%; height: 500px; background-color: rgb(255, 223, 158);">
+            <button class="btn" id="colorBtn" style="background-color: red;">
+                <span id="countdown">click me ! </span>
+            </button>
+            <br>
+            <hr>
+            <div class="row">
+                <div class="col"></div>
+                <div class="col-8 row border bg-dark trafficLight">
+                    <div class="col border p-3">
+                        <div class="light" id="light1"></div>
+                    </div>
+                    <div class="col border p-3">
+                        <div class="light" id="light2"></div>
+                    </div>
+                    <div class="col border p-3">
+                        <div class="light" id="light3"></div>
+                    </div>
+                </div>
+                <div class="col"></div>
             </div>
-            <div class="col border p-3">
-                <div class="light" id="light2"></div>
-            </div>
-            <div class="col border p-3">
-                <div class="light" id="light3"></div>
+           
+        </div>
+        <div class="row">
+            <div class="col " style="background-color:rgb(252, 235, 200);">
+                <div class="w-100"><img class="walkingimg" src="./img/walking.gif" alt="" id="ani"></div>
+
             </div>
         </div>
+    
     </div>
+
+
 
 
 
@@ -56,9 +112,8 @@
         // 同時計時(#1)
         // 除非setTimeout套娃setTimeout(#2)
 
-        function startCountdown(deley, Seconds) {
+        function startCountdown(deley, seconds) {
 
-            seconds = Seconds / 1000;
 
             setTimeout(() => {
                 // 綁定顯示倒數的文字
@@ -111,6 +166,7 @@
         let light1 = document.getElementById('light1');
         let light2 = document.getElementById('light2');
         let light3 = document.getElementById('light3');
+        
         traffiLight("init");
 
 
@@ -120,7 +176,11 @@
             btn.disabled = true;
             var deley = 3000;
             var seconds = 60000;
+            var Seconds =  seconds/ 1000;
             var timespend = seconds + deley;
+
+            const walkingAni = document.getElementById('ani');
+
             // 黃燈
             btn.style.backgroundColor = 'yellow'; // Change to yellow after click
             traffiLight('yellow');
@@ -132,12 +192,15 @@
                 traffiLight('green');
 
                 // #2--------------------------------------------------------------------
-                startCountdown(0, seconds);
+                // walkingAni.getAttribute('class',"walking1");
+                walkingAni.classList.add('walking1');
+                startCountdown(0, Seconds);
 
                 // 黃燈
                 setTimeout(function () {
                     btn.style.backgroundColor = 'yellow'; // Change to yellow after click
                     traffiLight('yellow');
+                    walkingAni.classList.remove('walking1');
                 }, seconds);
 
                 // 紅燈
