@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css.css">
+</head>
+
+<!--                  CSS                  -->
+
+
+<body>
+
+    <div class="container">
+        <h3 class="textcenter">Fieldset</h3>
+        <fieldset style="background-color: rgba(248, 213, 161, 0.913);">
+
+            <legend style="text-align: center;"> 報表</legend>
+            <form action="">
+                <br>
+                <div>
+                    <table>
+
+
+                        <tr>
+                            <td class="tdcenter"></td>
+                            <td class="tdcenter tdcolor">
+                                <div>
+                                    <div>
+                                        <p>姓名</p>
+
+                                        <input type="text" name="" id="nameID" title="請輸入姓名">
+                                    </div>
+                                    <div>
+                                        <p>密碼</p>
+                                        <input type="password" name="" id="pwID" title="你知道的太多了">
+                                    </div>
+                                    <div>
+                                        <p>電話</p>
+                                        <input type="text" name="" id="mobileID" title="請輸入電話">
+                                    </div>
+                                    <div>
+                                        <p>地址</p>
+                                        <input type="text" name="" id="addressID" title="請輸入地址">
+                                    </div>
+
+                                    <div>
+                                        <p>下拉選單</p>
+                                        <select name="" id="selections">
+
+                                            <option id="selectID01" value="value"></option>
+                                            <!-- <option id="selectID02">2222</option>
+                                            <option id="selectID03">3333</option>
+                                            <option id="selectID04">4444</option> -->
+
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <p>
+                                            選擇日期
+                                        </p>
+                                        <div class="tablecenter textcenter">
+                                            <p class="p_IN_table">
+                                                <input type="date" name="" id="" style="width: 90%;"
+                                                    class="input_IN_table textcenter">
+                                            </p>
+                                            <p class="p_IN_table">
+                                                <input type="time" name="" id="" class="input_IN_table timeset">
+                                                <span>至</span>
+                                                <input type="time" name="" id="" class="input_IN_table timeset">
+                                            </p>
+                                        </div>
+
+
+                                        <div>
+
+                                            <p>單選</p>
+                                            <input type="radio" name="o" id="o1">
+                                            <label for="1">1</label>
+                                            <input type="radio" name="o" id="o2">
+                                            <label for="2">2</label>
+                                            <input type="radio" name="o" id="o3">
+                                            <label for="3">3</label>
+                                        </div>
+                                        <div>
+                                            <p>多選</p>
+                                            <input type="checkbox" name="m[]" id="m1">
+                                            <label for="21">1</label>
+                                            <input type="checkbox" name="m[]" id="m2">
+                                            <label for="22">2</label>
+                                            <input type="checkbox" name="m[]" id="m3">
+                                            <label for="23">3</label>
+                                        </div>
+                                        <div>
+                                            <p>備註</p>
+                                            <textarea placeholder="-請輸入留言->" name="" id="" cols="30" rows="10"
+                                                style="width: 100%;"></textarea>
+                                            <!-- <p>reset</p> -->
+                                            <br> <br>
+                                            <input type="reset" value="重設" class="input_IN_table tdcenter"
+                                                style="color: black;">
+                                            <br> <br>
+                                            <!-- <p>submit</p> -->
+                                            <input type="submit" value="提交" class="input_IN_table tdcenter"
+                                                style="color: black;">
+                                            <br> <br>
+                                        </div>
+            </form>
+        </fieldset>
+    </div>
+
+    </div>
+    </td>
+    <td class="tdcenter"></td>
+    </tr>
+
+    </table>
+    </div>
+
+
+
+
+
+    </div>
+
+
+
+
+    <script>
+
+        function idValue(a, b) {
+            a.value = b;
+        }
+        function idHTML(a, b) {
+            a.innerHTML = b;
+        }
+
+        function selection(option, arr, idx) {
+            // 建立節點
+            option = document.createElement("option");
+            console.log(option);
+            // 節點設定
+            option.text = arr[idx];
+            option.value = arr[idx];
+
+            // select append
+            selections.appendChild(option);
+        }
+
+        let person = {
+            'name': 'nick',
+            'mobile': '0912345678',
+            'address': 'ABC STREET',
+            'arr': ['JOJO', '龍珠', '死神', '火影']
+        }
+
+
+
+
+
+
+        const nameID = document.getElementById('nameID');
+        const pwID = document.getElementById('pwID');
+        const mobileID = document.getElementById('mobileID');
+        const addressID = document.getElementById('addressID');
+        const selectID01 = document.getElementById('selectID01');
+        // const selectID02 = document.getElementById('selectID02');
+        // const selectID03 = document.getElementById('selectID03');
+        // const selectID04 = document.getElementById('selectID04');
+        let selID01;
+        let selID02;
+        let selID03;
+        let selID04;
+        
+
+        nameID.value = person.name;
+        pwID.value = "****";
+        idValue(mobileID, person.mobile);
+        idValue(addressID, person.address);
+
+        // idHTML(selectID01, person.arr[0]);
+        // idHTML(selectID02, person.arr[1]);
+        // idHTML(selectID03, person.arr[2]);
+        // idHTML(selectID04, person.arr[3]);
+
+        selection(selID01, person.arr,0);
+        selection(selID02, person.arr,1);
+        selection(selID03, person.arr,2);
+        selection(selID04, person.arr,3);
+
+
+    </script>
+</body>
+
+</html>
