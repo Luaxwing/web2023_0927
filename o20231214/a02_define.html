@@ -15,23 +15,50 @@
 </head>
 
 <body>
-    
+
     <input type="text" name="" id="myInput" value="123">
 
     <script>
 
-        // let 變數
+        // let 變數 宣告一次
 
         // const 常數
         // 綁定
         // 不能改元件，但可以更改其內容
-        
-        let x =10;
-        console.log('x',x);
-        x = 500 ;
-        console.log('x',x);
 
-        const yConst = 10 ;
+        let x = 10;
+        console.log('x', x);
+        x = 500;
+        console.log('x', x);
+
+        const yConst = 10;
+        // console.log('yConst', yConst);
+        // yConst = 500;
+        // console.log('yConst', yConst);
+
+        const myInput = document.getElementById('myInput');
+        console.log('myInput', myInput);
+        myInput.value = "55688";
+        console.log('myInput', myInput);
+
+        // 綁定用 const 避免 不小心改掉
+
+        // myInput = 123;
+        // console.log('myInput', myInput);
+
+        function aFun() {
+            let testStr = 'Hello aFun';
+            console.log('testStr', testStr);
+        }
+
+        function bFun() {
+            let testStr = 'Hello bFun';
+            console.log('testStr', testStr);
+        }
+
+
+        aFun();
+        bFun();
 
     </script>
 </body>
