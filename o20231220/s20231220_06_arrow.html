@@ -13,9 +13,25 @@
 </head>
 
 <body>
-
+  <button type="button" id="myBtn">myBtn</button>
+  <button type="button" id="myBtnArrow">myBtnArrow</button>
 
   <script>
+    let myBtn = document.getElementById('myBtn');
+    let myBtnArrow = document.getElementById('myBtnArrow');
+    console.info('window', window);
+
+    myBtn.addEventListener('click', function () {
+      console.log('myBtn ok');
+      console.log('this', this);
+    });
+
+
+    // 箭頭函式 this 為 window
+    myBtnArrow.addEventListener('click', () => {
+      console.log('myBtnArrow ok');
+      console.log('this', this);
+    });
 
     // arrow function
 
@@ -33,7 +49,7 @@
     // console.log(`${month}月${day}日`);
     // }
 
-    let dayFun = () => { console.log(`${month}月${day}日`) };
+    let dayFun = (month, day) => { console.log(`${month}月${day}日`) };
 
     dayFun(12, 20);
     dayFun(11, 1);
@@ -45,13 +61,16 @@
     //   return result;
     // }
 
-    let sumFun = (num1, num2) => {
-      let result = num1 + num2;
-      console.log('num1 + num2=', result);
-      return result;
-    };
-    
-    sumFun(10,50);
+    // let sumFun = (num1, num2) => {
+    //   let result = num1 + num2;
+    //   console.log('num1 + num2=', result);
+    //   return result;
+    // };
+
+    let sumFun = (num1, num2) => num1+num2;
+    // let sumFun = (num1, num2) =>{return num1+num2};
+
+    sumFun(10, 50);
 
   </script>
 </body>
