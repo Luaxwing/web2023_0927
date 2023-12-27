@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+  <div class="container">
+
+    <!-- 照片/數量/價錢 -->
+    <div class="row" id="title">
+      <div class="col">照片</div>
+      <div class="col">數量</div>
+      <div class="col">價錢</div>
+    </div>
+    <!-- <div class="row">
+  <div class="col"><img src="" alt=""></div>
+  <div class="col" id="num"></div>
+  <div class="col" id="price"></div>
+</div> -->
+
+  </div>
+
+
+
+
+  <script>
+     const title = document.getElementById('title');
+    let div=document.createElement("div");
+    let span = document.createElement("span");
+
+    let product = [
+      {
+        'name': "AA",
+        'img': "https://picsum.photos/id/237/200/300",
+        'num': 2,
+        'price': 100
+      },
+      {
+        'name': "BB",
+        'img': "https://picsum.photos/id/238/200/300",
+        'num': 3,
+        'price': 200
+      },
+      {
+        'name': "CC",
+        'img': "https://picsum.photos/id/239/200/300",
+        'num': 4,
+        'price': 300
+      }
+    ]
+
+
+    function textAppend(name, img, num, price, idx) {
+      proAppend = `<div class="row" id="product${idx}">
+  <div class="col">
+    <div class="row">
+  <div class="col-12">${name}</div>
+  <div class="col-12"  id="img${idx}"><img src="${img}" alt=""></div>
+</div>
+    </div>
+  <div class="col" id="num${idx}">${num}</div>
+  <div class="col" id="price${idx}">${price}</div>
+</div> 
+`;
+      return proAppend;
+    }
+
+
+  
+
+
+   
+
+
+    product.forEach(function(val,idx){
+span.innerHTML=textAppend(val.name, val.img, val.num, val.price, idx);
+title.appendChild(span);
+    });
+
+
+
+  </script>
+</body>
+
+</html>
