@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+
+$("#w-284").hide();
+
+function changeBtn(){
+ $(".btn").show();
+ }
+
+  $("#w-500").click(function(){
+  changeBtn();
+    $("img").attr("width", "500");
+     $(this).hide();
+  });
+  
+  $("#w-284").click(function(){
+  changeBtn();
+    $("img").attr("width", "284");
+     $(this).hide();
+  });
+});
+
+</script>
+</head>
+<body>
+
+<img src="https://picsum.photos/id/237/200/300" alt="Pulpit Rock" width="284" height="213"><br>
+
+<button class="btn" id="w-500">Set the width attribute of the image</button>
+
+<button class="btn" id="w-284">Set to origin size</button>
+
+</body>
+</html>
