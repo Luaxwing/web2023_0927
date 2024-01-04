@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+
+
+<br>
+    <div class="row">
+        <div class="col-1"></div>
+        <div class="col">
+            <div class="row">
+                <div class="col">
+                    <!-- <label for="">num1</label> -->
+                    <input class="form-control" type="number" id="num1" class="numIpt" value="0">
+                </div>
+                <div class="col">
+                    <!-- <label for="">num2</label> -->
+                    <input class="form-control" type="number" id="num2" class="numIpt" value="0">
+                </div>
+            <!-- </div> -->
+            <br>
+            <!-- <div class="row"> -->
+                <div class="col">
+                    <select class="form-select" name="" id="myMath">
+                        <option value="+">+</option>
+                        <option value="-">-</option>
+                        <option value="*">x</option>
+                        <option value="/">÷</option>
+                    </select>
+                </div>
+                <div class="col-1">
+                    <button id="btn" class="btn btn-primary">&nbsp;=&nbsp;</button>
+                </div>
+                <div class="col">
+                    <input class="form-control" type="text" name="" id="myresult" value="0" readonly ">
+                </div>
+          
+            </div>
+        </div>
+        <div class="col"></div>
+    </div>
+
+  
+            
+       
+
+
+
+
+
+
+
+    <script src=" https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+            integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+        <script>
+            $(document).ready(function () {
+
+                function calMath(math, num1, num2) {
+                    let result = 0;
+
+                    switch (math) {
+                        case "+":
+                            result = num1 + num2;
+                            break;
+                        case "-":
+                            result = num1 - num2;
+                            break;
+                        case "*":
+                            result = num1 * num2;
+                            break;
+                        case "/":
+                            result = (num1 / num2).toFixed(3);
+                            break;
+                        default:
+                            return 0;
+                    }
+
+
+                    return result;
+                }
+
+                const num1 = $("#num1");
+                const num2 = $("#num2");
+                const numControl = $(".numIpt");
+                const myMath = $("#myMath");
+                const myBtn = $("#btn");
+                const myResult = $('#myresult')
+
+                let math = myMath.val();
+                // let num1val = Number(num1.val());
+                // let num2val = Number(num2.val());
+                // let result = 0;
+
+
+                // myMath.change(function(){
+                //     math=myMath.val();
+                // })
+
+                // num1.change(function () {
+                //     num1val = num1.val()
+
+                // });
+
+                // num2.change(function () {
+                //     num2val = num2.val()
+
+                // });
+
+                numControl.change(function () {
+                    myResult.attr('style', 'background-color:rgb(126, 126, 126);')
+                    // console.log(myResult)
+                })
+
+                myBtn.click(function () {
+                    num1val = Number(num1.val());
+                    num2val = Number(num2.val());
+                    math = myMath.val();
+                    // console.log(num1val);
+                    // console.log(num2val);
+                    // console.log(numControl);
+                    // console.log(math);
+                    // console.log(myBtn);
+                    // console.log(myResult);
+
+                    // let result = calMath(math, num1val, num2val);
+
+                    let result = num1.val().length>0 && num2.val().length >0 ? calMath(math, num1val, num2val) : "no right input";
+                    console.log(result);
+                    myResult.attr('style', 'background-color:rgb(255,255,255);')
+                    myResult.attr('value', result)
+
+
+                })
+
+
+            })
+
+       
+
+        </script>
+
+
+</body>
+
+</html>
