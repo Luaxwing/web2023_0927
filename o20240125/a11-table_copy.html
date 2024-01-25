@@ -84,7 +84,7 @@
         console.log('this', this);
         let myTableLastTr = myTable.find('tr').last();
         console.log('myTableLastTr', myTableLastTr);
-        myTableLastTr.clone().appendTo("tbody");
+        myTableLastTr.clone(true).appendTo("tbody");
       });
 
       cloneBtn.click(function (e) {
