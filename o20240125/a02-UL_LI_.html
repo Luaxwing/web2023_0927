@@ -67,19 +67,25 @@
       $(document).ready(function () {
         const mySpan = $("#mySpan");
         const myB = $("#myB");
-        let spanAttr = mySpan.attr("class")+"\u0020";
+        let spanAttr = mySpan.attr("class") + "\u0020";
         console.log(spanAttr);
+        let nowElement;
 
         mySpan.click(function (e) {
           console.log("mySpan ok");
 
-          let nowElement = $(this).parent();
+           nowElement = $(this).parent();
           console.log("nowElement", nowElement);
-          let newEleattr=nowElement.attr("class", spanAttr+"text-danger");
-          console.log("newAttr",newEleattr);
+          let newEleattr = nowElement.attr("class", spanAttr + "text-danger");
+          console.log("newAttr", newEleattr);
         });
         myB.click(function (e) {
           console.log("myB ok");
+          console.log(typeof nowElement);
+          if (typeof nowElement != "undefined") {
+            let newEleattr = nowElement.attr("class", spanAttr);
+            console.log("newAttr", nowElement);
+          }
         });
       });
     </script>
