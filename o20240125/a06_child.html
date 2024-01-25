@@ -70,8 +70,9 @@
       const box = $('.box');
       box.click(function (e) {
         console.log('this', this);
-        // 
+        // 該物件->子
         let thisChild = $(this).children();
+        // 該物件->子->子
         let thisChildChild = $(this).children().children();
         // 
         console.log('thisChild', thisChild);

@@ -70,6 +70,7 @@
         console.log('mySpan ok');
         console.log(this, 'this');
         // console.log($(this), '$(this)');
+        // 該物件->找親物件至"class='box'"
         let thisParentsUntil = $(this).parentsUntil('.box');
         console.log('thisParentsUntil', thisParentsUntil);
         thisParentsUntil.attr('class', 'border border-primary p-3 text-primary');
