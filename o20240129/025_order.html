@@ -324,6 +324,24 @@ myBtnClass.click(function (e) {
           // ajax del method
         });
       });
+
+
+
+
+      // amount changed
+const inpAmount=$("input[type='number']");
+
+inpAmount.change(function(e){
+  theNum=$(this).val();
+  thePrice=parseInt($(this).parent().parent().parent().find('.myPrice').text());
+  theTotal=theNum*thePrice;
+  // console.log('price',theTotal);
+  let showPrice=$(this).parent().find("input[type='text']");
+  showPrice.val(theTotal);
+  // console.log(showPrice);
+
+})
+
     </script>
   </body>
 </html>
