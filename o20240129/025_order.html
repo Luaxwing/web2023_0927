@@ -85,6 +85,7 @@
             <th>NAME</th>
             <th>PRICE</th>
             <th>AMOUNT/PRICE</th>
+        
           
           </tr>
         </thead>
@@ -104,6 +105,10 @@
               <div>
                 <input type="number" name="" id="" value="1" max="10" min="1"/>
                 <input type="text" name="" id="" value="100" readonly/>
+                <!-- addbutton -->
+                <button class="addBtn btn btn-warning" data-item="item01">
+                  <i class="fa-solid fa-cart-plus"></i>
+                </button>
               </div>
             </td>
             <td class="op-btn">
@@ -127,6 +132,10 @@
               <div>
                 <input type="number" name="" id="" value="1" max="10" min="1"/>
                 <input type="text" name="" id="" value="200" readonly/>
+                               <!-- addbutton -->
+                <button class="addBtn btn btn-warning" data-item="item02">
+                  <i class="fa-solid fa-cart-plus"></i>
+                </button>
               </div>
             </td>
             <td class="op-btn">
@@ -150,6 +159,10 @@
               <div>
                 <input type="number" name="" id="" value="1" max="10" min="1"/>
                 <input type="text" name="" id="" value="150" readonly/>
+                               <!-- addbutton -->
+                <button class="addBtn btn btn-warning" data-item="item03">
+                  <i class="fa-solid fa-cart-plus"></i>
+                </button>
               </div>
             </td>
             <td class="op-btn">
@@ -173,6 +186,10 @@
               <div>
                 <input type="number" name="" id="" value="1" max="10" min="1"/>
                 <input type="text" name="" id="" value="120" readonly/>
+                               <!-- addbutton -->
+                <button class="addBtn btn btn-warning" data-item="item04">
+                  <i class="fa-solid fa-cart-plus"></i>
+                </button>
               </div>
             </td>
             <td class="op-btn">
@@ -288,6 +305,7 @@ myBtnClass.click(function (e) {
 });
 
         const myBtn = $(".myBtn");
+        const addBtn=$(".addBtn");
         myBtn.click(function (e) {
 
 
@@ -310,6 +328,26 @@ myBtnClass.click(function (e) {
           `)
           
         });
+
+addBtn.click(function (e){
+  console.log("this", this);
+          let targetData = $(this).data("item");
+          console.log(targetData);
+          let targetItem = $(`#${targetData}`);
+
+          console.log(targetItem[0]);
+          orderItem=targetItem.clone(true).removeClass('product-item').show();
+
+          // orderItem=orderItem.children().find('deBtn').css("display:block");
+          $(".order_list").after(orderItem);
+          orderItem.children().find('.delBtn').show();
+          orderItem.find('.op-btn').before(`
+          <td>
+            <input type="text" name="" id="" value="" placeholder="note here..." />
+          </td>
+          `)
+})
+
 
         // del
         const delBtn = $(".delBtn");
