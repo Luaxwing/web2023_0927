@@ -22,6 +22,10 @@
         content: "$";
       }
 
+      /* .totalPrice::before{
+        content: "$";
+      } */
+
       th,
       tr,
       td {
@@ -221,7 +225,11 @@
 
       <table>
         <h5>ORDER-LIST</h5>
-      <table class="table table-hover">
+        <div class="row">
+          <div class="col-10"></div>
+          <div class="col">TOTAL:<span class="totalPrice"></span></div>
+        </div>
+      <table class="table table-hover order-table">
         <tr class="order_list">
             <th>ID</th>
             <th>NAME</th>
@@ -270,7 +278,23 @@
         // INIT
 $("#item01").show();
 
+// SUM
+function mySum(){
+  let array=$(".order-table").children().find("input[readonly]");
+  let sum=0;
+  // console.log(array);
 
+  $.each(array, function (idx, e) { 
+    //  console.log('idx',idx);
+    eValue=$(this).val();
+    //  console.log('e',eValue);
+    sum=sum+Number(eValue)
+
+  });
+  $(".totalPrice").html("$"+sum);
+  // console.log('total',sum);
+  
+}
 //showup
 function show_hide(a, b) {
   console.log(b);
@@ -326,6 +350,8 @@ myBtnClass.click(function (e) {
             <input type="text" name="" id="" value="" placeholder="note here..." />
           </td>
           `)
+
+          mySum();
           
         });
 
@@ -346,6 +372,9 @@ addBtn.click(function (e){
             <input type="text" name="" id="" value="" placeholder="note here..." />
           </td>
           `)
+
+          mySum();
+          
 })
 
 
@@ -379,6 +408,8 @@ inpAmount.change(function(e){
   // console.log(showPrice);
 
 })
+
+
 
     </script>
   </body>
