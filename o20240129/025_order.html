@@ -227,7 +227,7 @@
         <h5>ORDER-LIST</h5>
         <div class="row">
           <div class="col-10"></div>
-          <div class="col">TOTAL:<span class="totalPrice"></span></div>
+          <div class="col">TOTAL:<span class="totalPrice">$0</span></div>
         </div>
       <table class="table table-hover order-table">
         <tr class="order_list">
@@ -279,9 +279,12 @@
 $("#item01").show();
 
 // SUM
-function mySum(){
-  let array=$(".order-table").children().find("input[readonly]");
-  let sum=0;
+function mySum(type,item=""){
+
+  switch(type){
+    case "add":
+    let array=$(".order-table").children().find("input[readonly]");
+   sum=0;
   // console.log(array);
 
   $.each(array, function (idx, e) { 
@@ -289,10 +292,22 @@ function mySum(){
     eValue=$(this).val();
     //  console.log('e',eValue);
     sum=sum+Number(eValue)
+    // a=Number($(".totalPrice").html().substring(1));
+    // console.log(a);
 
   });
   $(".totalPrice").html("$"+sum);
   // console.log('total',sum);
+      break;
+
+    case "del":
+     sum= Number($(".totalPrice").html().substring(1));
+     sum=sum-item.find("input[readonly]").val();
+    //  console.log(sum);
+    $(".totalPrice").html("$"+sum);
+       break;
+  }
+
   
 }
 //showup
@@ -351,7 +366,7 @@ myBtnClass.click(function (e) {
           </td>
           `)
 
-          mySum();
+          mySum('add');
           
         });
 
@@ -373,7 +388,7 @@ addBtn.click(function (e){
           </td>
           `)
 
-          mySum();
+          mySum('add');
           
 })
 
@@ -387,7 +402,7 @@ addBtn.click(function (e){
           console.log("thisParent", thisParent);
           console.log("thisParentParent", thisParentParent);
           thisParentParent.remove();
-
+          mySum('del',thisParentParent);
           // ajax del method
         });
       });
