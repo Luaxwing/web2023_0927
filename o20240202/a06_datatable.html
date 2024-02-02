@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.css"
+    />
+  </head>
+  <body>
+    <table id="myTable" class="display">
+      <thead>
+        <tr>
+          <th>id</th>
+          <th>area</th>
+          <th>city</th>
+          <th>name</th>
+          <th>location</th>
+          <th>web</th>
+        </tr>
+      </thead>
+      <tbody>
+
+      </tbody>
+    </table>
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.js"></script>
+
+
+    <script src="./js/obj.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        const myContainer = $("tbody");
+
+        console.log("factoryObj", factoryObj);
+
+
+        let res = factoryObj;
+
+        res.forEach((value) => {
+          let locationString = value.location.toString();
+  
+
+          let content = `
+          
+            <tr id='data_${value.id}'>
+              <td>
+                ${value.id}
+              </td>
+              <td>
+                ${value.area}
+              </td>
+              <td>
+                ${value.city}
+              </td>
+              <td>
+                ${value.name}
+              </td>
+              <td>
+                ${locationString}
+                </td>
+                <td>
+                  ${value.web}
+                </td>
+            </tr>
+         
+          `;
+
+          myContainer.append(content);
+        });
+
+
+
+        $("#myTable").DataTable();
+
+        
+      });
+      
+      //
+    </script>
+  </body>
+</html>
