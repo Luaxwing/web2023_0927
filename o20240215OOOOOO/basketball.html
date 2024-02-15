@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+      .content {
+        border: 1px solid black;
+        padding: 20px;
+      }
+
+      .myBtn {
+        height: 45px;
+        width: 150px;
+      }
+
+      .his-score {
+        color: rgb(23, 179, 23);
+        font-weight: 800;
+      }
+
+      .time_countdown {
+        color: orange;
+      }
+
+      .score2 {
+        color: blue;
+      }
+    </style>
+  </head>
+
+  <body>
+    <br />
+    <div class="container text-center">
+      <div class="row">
+        <div class="col">
+          <!-- COL-EMPTY -->
+        </div>
+        <!-- -=====================-NONUSE-=====================- -->
+        <div class="col-8">
+          <!-- TITLE -->
+          <h3>投籃大賽</h3>
+          <!-- TITLE END -->
+          <br />
+
+          <!-- content_1 -->
+          <div class="row content">
+            <div class="col"><!-- COL-EMPTY --></div>
+            <div class="col-9">
+              <div class="text-center">
+                <div class="">分數</div>
+                <div>
+                  <span class="his-score">歷史上最高分數</span>
+                  <span class="his-score" id="hisScore">0</span>
+                </div>
+                <div class="time_countdown" id="myCountdown">倒數計時</div>
+                <hr />
+                <div class="score2" id="scoreSpan">分數</div>
+              </div>
+            </div>
+            <div class="col"><!-- COL-EMPTY --></div>
+          </div>
+          <!-- content_1 END -->
+          <br /><br />
+          <!-- ---------------------------------------------- -->
+          <!-- content_2 -->
+          <div class="row content">
+            <div class="col ingame">
+              <button class="btn btn-warning myBtn" id="startBtn">開始</button>
+              <button class="btn btn-primary myBtn" id="shootBtn">投籃</button>
+              <!-- <button class="btn btn-danger myBtn" id="endBtn">遊戲結束</button> -->
+            </div>
+            <div class="col ingame">
+              <button class="btn btn-warning myBtn" id="resetBtn">重置</button>
+            </div>
+
+            <div class="col endgame">
+              <button class="btn btn-danger myBtn" id="endBtn">遊戲結束</button>
+            </div>
+          </div>
+          <!-- content_2 END -->
+        </div>
+        <!-- -=====================-NONUSE-=====================- -->
+        <div class="col">
+          <!-- COL-EMPTY -->
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script>
+      $(document).ready(function () {
+        // time-countdown
+        const countdownSpan = $("#myCountdown");
+        const hisScore = $("#hisScore");
+        const ingame=$(".ingame");
+        const endgame=$(".endgame");
+        let time = 10;
+        let endtime = time;
+        let gameset = 1;
+        let recordScore = 0;
+
+        function reset() {
+          time = endtime;
+          score = 0;
+          gameset = 1;
+          countdownSpan.text(time);
+          scoreSpan.text(score);
+          startBtn.show();
+          resetBtn.show();
+          ingame.show();
+          shootBtn.hide();
+          endBtn.hide();
+          endgame.hide();
+        }
+
+        function timeCD() {
+          countdownSpan.text(time);
+          setInterval(function () {
+            if (time <= 0) {
+              shootBtn.hide();
+              resetBtn.hide();
+              ingame.hide()
+              endgame.show();
+              endBtn.show();
+              return false;
+            } else if (gameset == 1) {
+              return false;
+            } else {
+              time--;
+              countdownSpan.text(time);
+              
+            }
+          }, 1000);
+        }
+        // time-countdown-end
+        // score-counting
+        const scoreSpan = $("#scoreSpan");
+        const startBtn = $("#startBtn");
+        const shootBtn = $("#shootBtn");
+        const resetBtn = $("#resetBtn");
+        const endBtn = $("#endBtn");
+        let score = 0;
+        endgame.hide();
+        endBtn.hide();
+        shootBtn.hide();
+        timeCD();
+
+        startBtn.click(function (e) {
+          gameset = 0;
+
+          scoreSpan.text(score);
+          startBtn.hide();
+          shootBtn.show();
+        });
+
+        shootBtn.click(function (e) {
+          // score += 2;
+          score += 3;
+          scoreSpan.text(score);
+
+          if (score > recordScore) {
+            recordScore = score;
+            hisScore.text(recordScore);
+          }
+        });
+
+        resetBtn.click(function (e) {
+          reset();
+        });
+        endBtn.click(function (e) {
+          reset();
+        });
+        // score-counting-end
+      });
+    </script>
+  </body>
+</html>
