@@ -29,22 +29,22 @@ while ($j <= 10){
 // do while
 $k=1;
 do{
-  $k++
+  $k++;
 }while($k<10)
 ?>
 
-  <script>
-
-// let j =1;
-// let sum=0;
-// while(j<=10){
-// console.log('j = ',j);
-// sum += j;
-// console.log('sum = ',sum);
-// j++;
-// }
+<script>
 
 
+
+    // let j =1;
+    // let sum=0;
+    // while(j<=10){
+    // console.log('j = ',j);
+    // sum += j;
+    // console.log('sum = ',sum);
+    // j++;
+    // }
   </script>
 </body>
 
